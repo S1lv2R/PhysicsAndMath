@@ -1,5 +1,6 @@
-\documentclass[15pt]{article}
+\documentclass[50pt]{article}
 \usepackage[utf8]{vietnam}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{graphicx} % Required for inserting images
@@ -12,8 +13,8 @@
 \section*{Lời giải đề xuất bởi các thành viên:}
 - \textit{Châu Nguyễn Thanh Duy}, LK14, trường THPT chuyên Nguyễn Quang Diêu\\
 - \textit{Quách Khả Đăng}, LK14, trường THPT chuyên Nguyễn Quang Diêu\\
-- \textit{Võ Minh Hào}, LK14, trường THPT chuyên Nguyễn Quang Diêu
-
+- \textit{Võ Minh Hào}, LK14, trường THPT chuyên Nguyễn Quang Diêu\\
+\hline
 \section*{Câu 1: (2,0 điểm)}
 a) Tính AC và AB.\\
 \\
@@ -23,21 +24,21 @@ Quãng đường người đi xe đạp đi được trong 1h là:\\
 \end{equation}
 Mà từ đề bài ta có:\\
 \begin{equation}
-    s_{2} = \frac{3}{4}AC
+    s_{2} = \dfrac{3}{4}AC
 \end{equation}
 Từ (1) và (2) ta có:
 \begin{equation*}
-    s_{2} = \frac{3}{4}AC = 15 \\
+    s_{2} = \dfrac{3}{4}AC = 15 \\
     \implies AC = 20 (km)
 \end{equation*}
 Chọn mốc thời gian lúc người đi bộ xuất phát.\\
 Thời gian người đi bộ đến B là:
 \begin{equation*}
-    t_{1} = \frac{BC}{5} + \frac{1}{2}
+    t_{1} = \dfrac{BC}{5} + \dfrac{1}{2}
 \end{equation*}
 Thời gian người đi xe đạp đến B là:
 \begin{equation*}
-    t_{2} = \frac{AC}{15} + \frac{BC}{15} + 1 = \frac{20}{15} + \frac{BC}{15} + 1
+    t_{2} = \dfrac{AC}{15} + \dfrac{BC}{15} + 1 = \dfrac{20}{15} + \dfrac{BC}{15} + 1
 \end{equation*}
 Mà 2 người đều đến B cùng lúc nên ta có: \\
 \begin{equation*}
@@ -57,7 +58,7 @@ Gọi D là điểm mà người đi bộ bắt đầu nghỉ.\\
 \end{equation*}
 Vận tốc để  2 người gặp nhau khi người đi bộ chuẩn bị xuất phát sau khi nghỉ 30', tức là sau 1,5h kể từ khi người đi xe đạp xuất phát là:\\
 \begin{equation*}
-    v = \frac{AD}{t_{2}} = \frac{30}{1,5} = 20 (km/h)
+    v = \dfrac{AD}{t_{2}} = \dfrac{30}{1,5} = 20 (km/h)
 \end{equation*}
 Vậy để gặp người đi bộ lúc người ấy đã nghỉ xong thì người đi xe đạp phải có vận tốc: $v = 20 (km/h)$
 
@@ -69,10 +70,10 @@ Ta có tổng khối lượng của nước là:\\
 Ta có phương trình cân bằng nhiệt:
 \begin{equation*}
     \begin{aligned}
-        & Q_{thu} = Q_{tỏa}\\
+        & Q_{toa} = Q_{thu}\\
         & \leftrightarrow m_{2}c(t_{2} - t) = m_{1}c(t - t_{1}) \\
         & \leftrightarrow m_{2}(t_{2} - t) = m_{1}(t - t_{1}) \\
-        & \leftrightarrow m_{2}c(84 - 36) = m_{1}c(36 - 12) \\
+        & \leftrightarrow m_{2}(84 - 36) = m_{1}(36 - 12) \\
         & \leftrightarrow 48m_{2} = 24m_{1} (2)
     \end{aligned}
 \end{equation*}
@@ -85,12 +86,12 @@ Từ (1) và (2) ta có:
 Vậy để có được 3kg nước ở nhiệt độ $36^o C$ thì ta cần 2kg nước ở nhiệt độ $12^o C$ và 1 kg nước ở nhiệt độ $84^o C$.
 
 \section*{Câu 3: (2,5 điểm)}
-a) Khi K mở ta có: $[(R_{1} nt R_{3}) // (R_{2} nt R_{4}] nt R_{5}$\\
+a) Khi K mở ta có: $[(R_{1} nt R_{3}) // (R_{2} nt R_{4})] nt R_{5}$\\
 \begin{equation*}
     \begin{aligned}
         & R_{13} = R_{1} + R_{3} = 1 + 3 = 4 (\Omega)\\
         & R_{24} = R_{2} + R_{4} = 4 + 8 = 12 (\Omega)\\
-        & R_{1234} = \frac{R_{13}R_{24}}{R_{13} + R_{24}} = \frac{4.12}{4 + 12} = 3 (\Omega) \\
+        & R_{1234} = \dfrac{R_{13}R_{24}}{R_{13} + R_{24}} = \dfrac{4.12}{4 + 12} = 3 (\Omega) \\
         & R_{k mở} = R_{1234} + R_{5} = 3 + 3 = 6 (\Omega) \\
     \end{aligned}
 \end{equation*}
@@ -105,119 +106,126 @@ Ta lại có:
 \end{equation*}
 Mà:
 \begin{equation*}
-    I = \frac{U}{R_{k mở}} = \frac{U}{6} (A)
+    I = \dfrac{U}{R_{k mở}} = \dfrac{U}{6} (A)
 \end{equation*}
 Thay vào (2):
 \begin{equation*}
-    \implies U_{13} = U_{24} = U - \frac{U}{6}.R_{5} = \frac{1}{2}U (V)
+    \implies U_{13} = U_{24} = U - \dfrac{U}{6}.R_{5} = \dfrac{1}{2}U (V)
 \end{equation*}
 Ta có:
 \begin{equation*}
     \begin{aligned}
-        U_{1} & = U_{13} - I_{3}R_{3} = U_{13} - \frac{U_{13}}{R_{13}}.R_{3}
-              & = \frac{U}{2} - \frac{U}{2.4}.3 = \frac{1}{8}U (V)
+        U_{1} & = U_{13} - I_{3}R_{3} = U_{13} - \dfrac{U_{13}}{R_{13}}.R_{3}
+              & = \dfrac{U}{2} - \dfrac{U}{2.4}.3 = \dfrac{1}{8}U (V)
     \end{aligned}
 \end{equation*}
 Ta tiếp tục có:
 \begin{equation*}
     \begin{aligned}
-        U_{2} & = U_{24} - I_{4}R_{4} = U_{24} - \frac{U_{24}}{R_{24}}.R_{4}
-              & = \frac{U}{2} - \frac{U}{2.12}.8 = \frac{1}{6}U (V)
+        U_{2} & = U_{24} - I_{4}R_{4} = U_{24} - \dfrac{U_{24}}{R_{24}}.R_{4}
+              & = \dfrac{U}{2} - \dfrac{U}{2.12}.8 = \dfrac{1}{6}U (V)
     \end{aligned}
 \end{equation*}
 Thay các giá trị $U_{1}$ và $U_{2}$ vào (1) ta có:\\
 \begin{equation*}
     \begin{aligned}
-        & \frac{1}{6}U - \frac{1}{8}U = 0,5
+        & \dfrac{1}{6}U - \dfrac{1}{8}U = 0,5
         \implies U = 12 (V)
     \end{aligned}
 \end{equation*}
 b) Khi k đóng ta có $[(R_{1} nt R_{3}) // (R_{2} nt R_{4}) // R_{6}] nt R_{5}$\\
 \begin{equation*}
-    R_{12346} = \frac{R_{1234}.R_{6}}{R_{1234} + R_{6}} = \frac{3R_{6}}{3 + R_{6}} (\Omega)
+    R_{12346} = \dfrac{R_{1234}.R_{6}}{R_{1234} + R_{6}} = \dfrac{3R_{6}}{3 + R_{6}} (\Omega)
 \end{equation*}
 \begin{equation*}
-    R_{kd} = R_{12346} + R_{5} = \frac{3R_{6}}{3 + R_{6}} + 3 = \frac{6R_{6} + 9}{3 + R_{6}}
+    R_{kd} = R_{12346} + R_{5} = \dfrac{3R_{6}}{3 + R_{6}} + 3 = \dfrac{6R_{6} + 9}{3 + R_{6}}
 \end{equation*}
 Ta có:
 \begin{equation*}
     \begin{aligned}
-        U_{13} & = U_{24} = U_{6} = U - I'R_{5} = U - \frac{U}{R_{kd}}.R_{5} \\
-               & = U - \frac{U(3 + R_{6}).3}{6R_{6} + 9}.3 \\
-               & = U(1 - \frac{3 + R_{6}}{2R_{6} + 3} \\
-               & = U.\frac{R_{6}}{2R_{6} + 3} \\
+        U_{13} & = U_{24} = U_{6} = U - I'R_{5} = U - \dfrac{U}{R_{kd}}.R_{5} \\
+               & = U - \dfrac{U(3 + R_{6}).3}{6R_{6} + 9}.3 \\
+               & = U(1 - \dfrac{3 + R_{6}}{2R_{6} + 3}) \\
+               & = U.\dfrac{R_{6}}{2R_{6} + 3} \\
     \end{aligned}
 \end{equation*}
-Ta có:
+Ta lại có:
 \begin{equation*}
-P_{6} = \frac{U_{6}^2}{R_{6}} = \frac{U^2.R_{6}^2}{(2R_{6} + 3)^2.R_{6}} = \frac{U^2R_{6}}{(2R_{6} + 3)^2}\\
+P_{6} = \dfrac{U_{6}^2}{R_{6}} = \dfrac{U^2.R_{6}^2}{(2R_{6} + 3)^2.R_{6}} = \dfrac{U^2R_{6}}{(2R_{6} + 3)^2}\\
 \end{equation*}
 \begin{equation*}
-    \implies 3,84 = \frac{12^2.R_{6}}{(2R_{6} + 3)^2}\\
+    \implies 3,84 = \dfrac{12^2.R_{6}}{(2R_{6} + 3)^2}\\
 \end{equation*}
 \begin{equation*}
-    \leftrightarrow 15,36R_{6}^2 - 97,92R_{6} + 34,56 = 0\\
+    \begin{aligned}
+        & \leftrightarrow 15,36R_{6}^2 - 97,92R_{6} + 34,56 = 0\\
+        & \implies \begin{cases}
+            R_{6} = \dfrac{3}{8} (\Omega) (loai)\\
+            \\
+            R_{6} = 6 (\Omega) (nhan)
+        \end{cases}
+    \end{aligned}
 \end{equation*}
-$\implies R_{6} = \frac{3}{8} (\Omega)$ (Loại vì $R_{6}$ có giá trị nguyên)\\
-$\implies R_{6} = 6 (\Omega)$ (Nhận)\\
 
 \section*{Câu 4: (1,5 điểm)}
 a) Tính R.\\
 \\
-Ta có: $P_{hp} = I^2R = \frac{P^2}{U^2}R$\\
-\\
-$\implies R = \frac{P_{hp}}{P^2}U^2 = \frac{0,026P}{P^2}U^2 = \frac{0,026}{P}U^2$\\
-\\
-$\implies R = \frac{0,026}{160.10^3}.(6.10^3)^2 = 5,85 (\Omega)$\\
-\\
-b) Tìm x = $\frac{n1}{n2}$\\
+Ta có:
+\begin{equation*}
+    \begin{aligned}
+        & P_{hp} = I^2R = \dfrac{P^2}{U^2}R \\
+        & \implies R = \dfrac{P_{hp}}{P^2}U^2 = \dfrac{0,026P}{P^2}U^2 = \dfrac{0,026}{P}U^2 \\
+        & \implies R = \dfrac{0,026}{160.10^3}.(6.10^3)^2 = 5,85 (\Omega)
+    \end{aligned}
+\end{equation*}
+b) Tìm x = $\dfrac{n1}{n2}$\\
 \\
 Ta có công suất hao phí lúc này là:
 \begin{equation*}
-    P_{hp'} = 1040 (W)
+    P_{hp}' = 1040 (W)
 \end{equation*}
-Ta lại có: $P_{hp'} = I'^2R$\\
+Ta lại có: $P_{hp}' = I'^2R$\\
 Cường độ dòng điện truyền tải qua dây khi đó là:
 \begin{equation*}
-    I' = \sqrt{\frac{P_{hp'}}{R}} = \sqrt{\frac{1040}{5,85}} = \frac{40}{3} (A)
+    I' = \sqrt{\dfrac{P_{hp}'}{R}} = \sqrt{\dfrac{1040}{5,85}} = \dfrac{40}{3} (A)
 \end{equation*}
 Hiệu điện thế đường dây là:
 \begin{equation*}
-    \Delta U = I'R = \frac{40}{3}.5,85 = 78 (V)
+    \Delta U = I'R = \dfrac{40}{3}.5,85 = 78 (V)
 \end{equation*}
 Công suất tiêu thụ là:
 \begin{equation*}
-    P' = P - P_{hp'}
+    P' = P - P_{hp}'
 \end{equation*}
 Hiệu điện thế nới tiêu thụ là:
 \begin{equation*}
-    U' = \frac{P'}{I'} = \frac{P - P_{hp'}}{I'} = \frac{160.10^3 - 1040}{\frac{40}{3}} = 11922 (V)
+    U' = \dfrac{P'}{I'} = \dfrac{P - P_{hp}'}{I'} = \dfrac{160.10^3 - 1040}{\dfrac{40}{3}} = 11922 (V)
 \end{equation*}
 Hiệu điện thế cuộn thứ cấp là: $U_{2}$ = U' + $\Delta U$ = 11922 + 78 = 12000 (V)\\
 Hiệu điện thế cuộn sơ cấp là: $U_{1} = U = 6.10^3 (V)$\\
 Vậy tỉ số máy biến thế khi đó là:
 \begin{equation*}
-    x = \frac{n_{1}}{n_{2}} = \frac{U_{1}}{U_{2}} = \frac{6.10^3}{12.10^3} = \frac{1}{2}
+    x = \dfrac{n_{1}}{n_{2}} = \dfrac{U_{1}}{U_{2}} = \dfrac{6.10^3}{12.10^3} = \dfrac{1}{2}
 \end{equation*}
 
 \section*{Câu 5: (2,0 điểm)}
 a)
 Xét $\triangle OHS \cong \triangle OH'S'$ ta có:\\
 \begin{equation*}
-    \implies \frac{OH}{OH'} = \frac{HS}{H'S'}
-    \leftrightarrow \frac{d}{d'} = \frac{h}{h'} (1)
+    \implies \dfrac{OH}{OH'} = \dfrac{HS}{H'S'}
+    \leftrightarrow \dfrac{d}{d'} = \dfrac{h}{h'} (1)
 \end{equation*}
 Xét $\triangle OIF \cong \triangle HSF$ ta có:\\
 \begin{equation*}
-    \implies \frac{HS}{OI} = \frac{HF}{OF}\\
-    \leftrightarrow \frac{HS}{H'S'} = \frac{OH - OF}{OF}
-    \leftrightarrow \frac{h}{h'} = \frac{d - f}{f} (2)
+    \implies \dfrac{HS}{OI} = \dfrac{HF}{OF}\\
+    \leftrightarrow \dfrac{HS}{H'S'} = \dfrac{OH - OF}{OF}
+    \leftrightarrow \dfrac{h}{h'} = \dfrac{d - f}{f} (2)
 \end{equation*}\\
 Từ (1) và (2) ta có:\\
 \begin{equation*}
-    \implies \frac{d}{d'} = \frac{d - f}{f}\\
+    \implies \dfrac{d}{d'} = \dfrac{d - f}{f}\\
     \leftrightarrow df = d'd - d'f\\
-    \leftrightarrow \frac{1}{f} = \frac{1}{d} + \frac{1}{d'}
+    \leftrightarrow \dfrac{1}{f} = \dfrac{1}{d} + \dfrac{1}{d'}
 \end{equation*}\\
 Mà ta có:
 \begin{cases}
@@ -225,20 +233,22 @@ Mà ta có:
     d = 40 (cm)
 \end{cases}
 $\implies d' = 40 (cm)$\\
-Từ (1) $\implies \frac{40}{40} = \frac{3}{h'} \implies h' = 3 (cm)$\\
+\\
+Từ (1) $\implies \dfrac{40}{40} = \dfrac{3}{h'} \implies h' = 3 (cm)$\\
+\\
 Vậy khoảng cách từ S' đến thấu kính là 40cm và S' đến trục chính là 3cm.\\
 b)
 Ta có:
 \begin{equation*}
-    \frac{1}{f} = \frac{1}{d} + \frac{1}{d'}\\
+    \dfrac{1}{f} = \dfrac{1}{d} + \dfrac{1}{d'}\\
 \end{equation*}
 Mà $d_{1} = 30cm$\\
 \begin{equation*}
-    \implies \frac{1}{20} = \frac{1}{30} + \frac{1}{d'} \implies d' = 60 (cm)
+    \implies \dfrac{1}{20} = \dfrac{1}{30} + \dfrac{1}{d'} \implies d' = 60 (cm)
 \end{equation*}
 Tương tự (1)  ta có:
 \begin{equation*}
-    \frac{d_{1}}{d_{1}'} = \frac{h}{h''} \leftrightarrow \frac{30}{60} = \frac{3}{h''}\\
+    \dfrac{d_{1}}{d_{1}'} = \dfrac{h}{h''} \leftrightarrow \dfrac{30}{60} = \dfrac{3}{h''}\\
     \implies h'' = 6 (cm)
 \end{equation*}
 Độ dịch chuyển của ảnh S' là:\\
@@ -248,14 +258,14 @@ Tương tự (1)  ta có:
 \end{equation*}
 Vận tốc của ảnh trong quá trình dịch chuyển là:\\
 \begin{equation*}
-    v' = \frac{S'S''}{t}
+    v' = \dfrac{S'S''}{t}
 \end{equation*}
 Mà:
 \begin{equation*}
-    t = \frac{d_{1} - d}{v} = \frac{40 - 30}{10} = 1 (s)
+    t = \dfrac{d_{1} - d}{v} = \dfrac{40 - 30}{10} = 1 (s)
 \end{equation*}
 \begin{equation*}
-    \implies v' = \frac{\sqrt{409}}{1} = \sqrt{409} (cm/s)
+    \implies v' = \dfrac{\sqrt{409}}{1} = \sqrt{409} (cm/s)
 \end{equation*}
 Vậy vận tốc của ảnh trong thời gian chuyển động là $\sqrt{409}$ (cm/s).
 \section*{Câu 6: (1,0 điểm)}
@@ -264,13 +274,15 @@ Cho lọ thủy ngân lên cân, ta cân được khối lượng tổng cộng:
 \begin{equation*}
     m = m_{1} + m_{2} (1)
 \end{equation*}
-Cho lọ thủy ngân vào bình chia độ chứa đầy nước, ta xác định được thể tích nước dâng lên:
+Với $m_{1}$, $m_{2}$ lần lượt là khối lượng lọ thủy tinh và khối lượng thủy ngân.\\
+Cho lọ thủy ngân vào bình chia độ chứa nước đủ thả chìm bình, ta xác định được thể tích nước dâng lên cũng chính là thể tích của lọ thủy tinh và thể tích thủy ngân bên trong:
 \begin{equation*}
-    V = V_{1} + V_{2} = \frac{m_{1}}{D_{1}} + \frac{m_{2}}{D_{2}} (1)
+    V = V_{1} + V_{2} = \dfrac{m_{1}}{D_{1}} + \dfrac{m_{2}}{D_{2}} (2)
 \end{equation*}
+Với $V_{1}$, $V_{2}$ lần lượt là thể tích lọ thủy tinh và thể tích thủy ngân.\\
 Từ (1) và (2), ta có:\\
 \begin{equation*}
-    m_{2} = \frac{(m - VD_{1})D_{2}}{D_{2} - D_{1}}
+    m_{2} = \dfrac{(m - VD_{1})D_{2}}{D_{2} - D_{1}}
 \end{equation*}
 
 \end{document}
