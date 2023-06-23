@@ -43,9 +43,9 @@
     </head>
     <body>
         <center>
-            <button onclick="draw('manh_dat_1')">Mảnh đất 1</button>
-            <button onclick="draw('manh_dat_2')">Mảnh đất 2</button>
-            <button onclick="draw('manh_dat_3')">Mảnh đất 3</button>
+            <button onclick="switch_('manh_dat_1')">Mảnh đất 1</button>
+            <button onclick="switch_('manh_dat_2')">Mảnh đất 2</button>
+            <button onclick="switch_('manh_dat_3')">Mảnh đất 3</button>
             <br />
             <canvas id="canvas"></canvas>
             <div class="add_points">
@@ -58,6 +58,8 @@
         <script>
             var canvas, ctx, detached, ctx2;
             var SCALE, WIDTH, HEIGHT, SIZE, polygon;
+            var data = [],
+                current;
             const S = 9; // Độ phủ của drone
             const info = {
                 manh_dat_1: {
@@ -157,12 +159,20 @@
                 }
             }
 
+            function switch_(name) {
+                data = [];
+                current = name;
+                draw(name);
+            }
+
             function draw_points() {
+                draw(current);
                 detached = canvas.cloneNode();
                 ctx2 = detached.getContext('2d');
                 const v = `[${document.getElementById('points').value}]`;
                 const a = JSON.parse(v);
-                for (let e of a) drawDot(e);
+                data = data.concat(a);
+                for (let e of data) drawDot(e);
                 ctx.globalAlpha = 0.3;
                 ctx.drawImage(detached, 0, 0);
             }
