@@ -3,57 +3,105 @@
     <head>
         <meta charset="utf-8">
         <title>Graph</title>
-        <link rel="stylesheet" href="./styles/main.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <style>
+            body {
+                font-family: Roboto
+            }
+
+            button {
+                width: 200px;
+                height: 50px;
+                background: #C0D2E9;
+                color: white;
+                font-size: 20px;
+                border-radius: 5px;
+                border: none;
+                margin: 5px;
+                font-family: Roboto
+            }
+
+            .add_points {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            textarea {
+                width: 200px;
+                height: 200px;
+                border-radius: 5px;
+                padding: 5px;
+                border-color: #C0D2E9;
+                outline: none;
+            }
+
+            canvas {
+                margin-top: 10px;
+            }
+        </style>
     </head>
     <body>
-        <canvas id="canvas"></canvas>
+        <center>
+            <button onclick="draw('manh_dat_1')">Mảnh đất 1</button>
+            <button onclick="draw('manh_dat_2')">Mảnh đất 2</button>
+            <button onclick="draw('manh_dat_3')">Mảnh đất 3</button>
+            <br />
+            <canvas id="canvas"></canvas>
+            <div class="add_points">
+                <textarea id="points" placeholder="Danh sách các điểm đánh dấu"></textarea>
+                <br />
+                <button onclick="draw_points()">Thêm</button>
+            </div>
+        </center>
         <script src="data.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
+            var canvas, ctx, detached, ctx2;
+            var SCALE, WIDTH, HEIGHT, SIZE, polygon;
             const S = 9; // Độ phủ của drone
             const info = {
-            	manh_dat_1: {
-            		scale: 5,
-            		width: 100,
-            		height: 50,
-            		size: 25,
-            		k: 0,
-            		polygon: [[0,0], [100, 0], [100, 50], [0, 50]]
-            	},
-            	manh_dat_2: {
-            		scale: 2,
-            		width: 375,
-            		height: 150,
-            		size: 37.5,
-            		k: 50*Math.sqrt(3) - 75,
-            		polygon: [[0,0], [375 + 50*Math.sqrt(3) - 75, 0], [225 + 50*Math.sqrt(3) - 75, 150], [75 + 50*Math.sqrt(3) - 75, 150]]
-            	},
-            	manh_dat_3: {
-            		scale: 1,
-            		width: 450,
-            		height: 600,
-            		size: 150,
-            		k: 0,
-            		polygon: [[0, 0], [450, 0], [450, 150], [150, 150], [300, 600], [0, 450]]
-            	}
+                manh_dat_1: {
+                    scale: 5,
+                    width: 100,
+                    height: 50,
+                    size: 25,
+                    k: 0,
+                    polygon: [
+                        [0, 0],
+                        [100, 0],
+                        [100, 50],
+                        [0, 50]
+                    ]
+                },
+                manh_dat_2: {
+                    scale: 2,
+                    width: 375,
+                    height: 150,
+                    size: 37.5,
+                    k: 50 * Math.sqrt(3) - 75,
+                    polygon: [
+                        [0, 0],
+                        [375 + 50 * Math.sqrt(3) - 75, 0],
+                        [225 + 50 * Math.sqrt(3) - 75, 150],
+                        [75 + 50 * Math.sqrt(3) - 75, 150]
+                    ]
+                },
+                manh_dat_3: {
+                    scale: 1,
+                    width: 450,
+                    height: 600,
+                    size: 150,
+                    k: 0,
+                    polygon: [
+                        [0, 0],
+                        [450, 0],
+                        [450, 150],
+                        [150, 150],
+                        [300, 600],
+                        [0, 450]
+                    ]
+                }
             }
-            const o = info.manh_dat_3;
-            const SCALE = o.scale;
-            const k = o.k;
-            const WIDTH = (o.width + k)*SCALE;
-            const HEIGHT = o.height*SCALE;
-            const SIZE = o.size*SCALE;
-            const polygon = o.polygon;
-            
-            const canvas = document.getElementById('canvas');
-            canvas.width = WIDTH;
-            canvas.height = HEIGHT;
-            const ctx = canvas.getContext('2d');
-            const detached = canvas.cloneNode();
-            const ctx2 = detached.getContext('2d');
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
             function drawLine(start, end) {
                 ctx.beginPath();
@@ -74,27 +122,50 @@
                 ctx2.stroke();
                 ctx2.restore();
             }
-            ctx.strokeStyle = 'gray';
-            ctx.lineWidth = 0.2;
-            for (let x = (k * SCALE || SIZE - 0.5 * SCALE); x <= WIDTH; x += SIZE) drawLine([x, 0], [x, HEIGHT]);
-            for (let y = SIZE - 0.5 * SCALE; y <= HEIGHT; y += SIZE) drawLine([0, y], [WIDTH, y]);
-            ctx.strokeStyle = 'rgb(45, 106, 181)';
-            ctx.lineWidth = 5;
-            
-            ctx.fillStyle = 'rgba(149, 187, 244, 0.15)';
-            ctx.beginPath();
-            ctx.moveTo(0, convert_y(0));
-            for (let e of polygon) ctx.lineTo(e[0] * SCALE, convert_y(e[1] * SCALE));
-            ctx.closePath();
-            ctx.fill();
-            
-            for (let i = 0; i < polygon.length; ++i) {
-                if (i == polygon.length - 1) drawLine([polygon[i][0] * SCALE, convert_y(polygon[i][1] * SCALE)], [polygon[0][0] * SCALE, convert_y(polygon[0][1] * SCALE)]);
-                else drawLine([polygon[i][0] * SCALE, convert_y(polygon[i][1] * SCALE)], [polygon[i + 1][0] * SCALE, convert_y(polygon[i + 1][1] * SCALE)]);
+
+            function draw(name) {
+                const o = info[name];
+                SCALE = o.scale;
+                k = o.k;
+                WIDTH = (o.width + k) * SCALE;
+                HEIGHT = o.height * SCALE;
+                SIZE = o.size * SCALE;
+                polygon = o.polygon;
+                canvas = document.getElementById('canvas');
+                canvas.width = WIDTH;
+                canvas.height = HEIGHT;
+                ctx = canvas.getContext('2d');
+                detached = canvas.cloneNode();
+                ctx2 = detached.getContext('2d');
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, WIDTH, HEIGHT);
+                ctx.strokeStyle = 'gray';
+                ctx.lineWidth = 0.2;
+                for (let x = (k * SCALE || SIZE - 0.5 * SCALE); x <= WIDTH; x += SIZE) drawLine([x, 0], [x, HEIGHT]);
+                for (let y = SIZE - 0.5 * SCALE; y <= HEIGHT; y += SIZE) drawLine([0, y], [WIDTH, y]);
+                ctx.strokeStyle = 'rgb(45, 106, 181)';
+                ctx.lineWidth = 5;
+                ctx.fillStyle = 'rgba(149, 187, 244, 0.15)';
+                ctx.beginPath();
+                ctx.moveTo(0, convert_y(0));
+                for (let e of polygon) ctx.lineTo(e[0] * SCALE, convert_y(e[1] * SCALE));
+                ctx.closePath();
+                ctx.fill();
+                for (let i = 0; i < polygon.length; ++i) {
+                    if (i == polygon.length - 1) drawLine([polygon[i][0] * SCALE, convert_y(polygon[i][1] * SCALE)], [polygon[0][0] * SCALE, convert_y(polygon[0][1] * SCALE)]);
+                    else drawLine([polygon[i][0] * SCALE, convert_y(polygon[i][1] * SCALE)], [polygon[i + 1][0] * SCALE, convert_y(polygon[i + 1][1] * SCALE)]);
+                }
             }
-            for (let e of data) drawDot(e);
-            ctx.globalAlpha = 0.3;
-            ctx.drawImage(detached, 0, 0);
+
+            function draw_points() {
+                detached = canvas.cloneNode();
+                ctx2 = detached.getContext('2d');
+                const v = `[${document.getElementById('points').value}]`;
+                const a = JSON.parse(v);
+                for (let e of a) drawDot(e);
+                ctx.globalAlpha = 0.3;
+                ctx.drawImage(detached, 0, 0);
+            }
         </script>
     </body>
 </html>
