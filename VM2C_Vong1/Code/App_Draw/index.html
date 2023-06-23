@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+                <meta charset="utf-8">
+                <title>Graph</title>
+                <link rel="stylesheet" href="./styles/main.css">
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+        </head>
+        <body>
+                <canvas id="canvas"></canvas>
+	
+		<script src="data.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script>
+                	// manh dat 3
+                	const SCALE = 1, k = 0;
+                	const WIDTH = 450, HEIGHT = 600, SIZE = 150;
+                	/*
+                	manh dat 2
+                	const k = 50 * Math.sqrt(3) - 75;
+                	const WIDTH = (375 + k)*SCALE, HEIGHT = 150*SCALE, SIZE = 37.5*SCALE;
+                	*/
+                	//const WIDTH = 100*SCALE, HEIGHT = 50*SCALE, SIZE = 25*SCALE;
+                	
+                	const canvas = document.getElementById('canvas');
+                	canvas.width = WIDTH;
+                	canvas.height = HEIGHT;
+                	const ctx = canvas.getContext('2d');
+                	
+                	const detached = canvas.cloneNode();
+                	const ctx2 = detached.getContext('2d');
+                	
+                	ctx.fillStyle = 'white';
+                	ctx.fillRect(0, 0, WIDTH, HEIGHT);
+                	
+                	function drawLine(start, end) {
+              			ctx.beginPath();
+                		ctx.moveTo(start[0], start[1]);
+                		ctx.lineTo(end[0], end[1]);
+                		ctx.stroke();
+        		}
+
+        		const convert_y = (y) => (HEIGHT*SCALE - y);
+        		
+        		function drawDot(pos) {
+				ctx2.save();
+				ctx2.beginPath();
+				ctx2.arc(pos[0]*SCALE, convert_y(pos[1]*SCALE), 9, 0, 2 * Math.PI, false);
+				ctx2.fillStyle = 'rgb(45, 106, 181)';
+				ctx2.strokeStyle = 'rgb(45, 106, 181)';
+				ctx2.fill();
+				ctx2.lineWidth = 0.5;
+				ctx2.stroke();
+				ctx2.restore();
+			}
+        		
+        		ctx.strokeStyle = 'gray';
+                	ctx.lineWidth = 0.2;
+                	for (let x = (k || SIZE - 0.5*SCALE); x <= WIDTH; x += SIZE)
+                        	drawLine([x, 0], [x, HEIGHT]);
+
+		        for (let y = SIZE - 0.5*SCALE; y <= HEIGHT; y += SIZE)
+		                drawLine([0, y], [WIDTH, y]);
+		        
+		        ctx.strokeStyle = 'rgb(45, 106, 181)';
+		        ctx.lineWidth = 5;
+		        const polygon = [[0,0], [450, 0], [450, 150], [150, 150], [300, 600], [0, 450]] // manh3
+		        
+		        //const polygon = [[0,0], [100, 0], [100, 50], [0, 50]] // manh 1
+		        //const polygon = [[0,0], [375 + k, 0], [225 + k, 150], [75 + k, 150]] // manh dat 2
+			ctx.fillStyle = 'rgba(149, 187, 244, 0.15)';
+			ctx.beginPath();
+			ctx.moveTo(0, convert_y(0));
+			
+			for (let e of polygon)
+				ctx.lineTo(e[0]*SCALE, convert_y(e[1]*SCALE));
+			
+			ctx.closePath();
+			ctx.fill();
+			
+			for (let i = 0; i < polygon.length; ++i) {
+				if (i == polygon.length - 1)
+					drawLine([polygon[i][0]*SCALE, convert_y(polygon[i][1]*SCALE)], [polygon[0][0]*SCALE, convert_y(polygon[0][1]*SCALE)]);
+				else drawLine([polygon[i][0]*SCALE, convert_y(polygon[i][1]*SCALE)], [polygon[i + 1][0]*SCALE, convert_y(polygon[i + 1][1]*SCALE)]); 
+			}
+			
+			for (let e of data)
+				drawDot(e);
+				
+			ctx.globalAlpha = 0.3;
+			ctx.drawImage(detached, 0, 0);
+                </script>
+        </body>
+</html>
