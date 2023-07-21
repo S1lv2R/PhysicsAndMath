@@ -59,25 +59,29 @@ def calculate():
     return vars.x.astype(int)
 
 days = 28
+old_indices = np.array([])
 for i in range(days * 3):
     result = calculate()
-    indices = np.argwhere(result == 1) # Liệt kê danh sách (i, j) mà được chọn do gurobi tính toán
-    output = "Ca " + str((i + 1) % 3) + "\n"
-    not_be_ones = []
+    indices = np.argwhere(result == 1) # Liệt kê danh sách (i, j) được chọn do gurobi tính toán
+    output = "Ca " + str(i + 1) + "\n"
     for j in range(len(indices)): # Lặp qua danh sách indices
         h = indices[j, :] # Thông tin: i (công nhân thứ i), j (kỹ năng thứ j)
         vid = "V" + (str(h[0] + 1) if (h[0] + 1) >= 10 else "0" + str(h[0] + 1)) # ID của công nhân
         output += vid + " Ky nang: " + dict[h[1]] + "\n"
         d[h[0]] += 1 # Tăng số ngày làm việc đối với công nhân được chọn
         c[h[0], h[1]] = 0 # Công nhân được chọn trong ca hôm nay sẽ không được làm các ca khác trong ngày
-        # not_be_ones.append([h[0], h[1]])
     
     if ((i + 1) % 3 == 0): # Nếu hết một ngày
         # Sang hôm sau các công nhân đều có thể làm việc (RESET), trừ các công nhân làm ca tối hôm qua
         c = np.ones((n, k))
-        # for i in range(len(not_be_ones)):
-        #     c[not_be_ones[i][0], not_be_ones[i][1]] = 0
+        for i in range(len(indices)):
+            c[indices[i, 0], indices[i, 1]] = 0
+        old_indices = indices
+    elif ((i + 1) % 2 == 0):
+        # Sang ngày thứ hai thì những công nhân làm ca đêm hôm trước sẽ bắt đầu đi làm
+        for i in range(len(old_indices)):
+            c[old_indices[i, 0], old_indices[i, 1]] = 1
 
-    write_output(output + "\n")
+    write_output(output)
 
 print(d)

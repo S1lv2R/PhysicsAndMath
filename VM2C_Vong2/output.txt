@@ -24,432 +24,12 @@ V02 Ky nang: dieu khien may dong hop
 V04 Ky nang: dieu khien may rot
 V09 Ky nang: dieu khien may dong hop
 V11 Ky nang: pallet
-V12 Ky nang: pallet
-
-Ca 2
-V06 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V14 Ky nang: dieu khien may dong hop
-V15 Ky nang: pallet
-V17 Ky nang: pallet
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V07 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-V13 Ky nang: pallet
-
-Ca 2
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V14 Ky nang: dieu khien may dong hop
-V15 Ky nang: pallet
-V17 Ky nang: pallet
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V12 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V13 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 0
-V03 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V13 Ky nang: pallet
-
-Ca 2
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V11 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V15 Ky nang: pallet
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V15 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
-V09 Ky nang: dieu khien may dong hop
-V15 Ky nang: pallet
-
-Ca 2
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V13 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V08 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V17 Ky nang: pallet
-
-Ca 0
-V04 Ky nang: dieu khien may rot
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-V12 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V08 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 0
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V06 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V07 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V17 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V11 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V15 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V06 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
-V09 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 2
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V04 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V11 Ky nang: pallet
-V12 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V07 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 0
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V13 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V08 Ky nang: dieu khien may rot
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
-V17 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V08 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
-V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
-
-Ca 0
-V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V11 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
 V15 Ky nang: pallet
 
 Ca 2
 V01 Ky nang: dieu khien may dong hop
 V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
+V13 Ky nang: pallet
 V14 Ky nang: dieu khien may dong hop
 V17 Ky nang: pallet
 
@@ -462,20 +42,20 @@ V16 Ky nang: dieu khien may dong hop
 
 Ca 1
 V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
+V03 Ky nang: dieu khien may rot
 V09 Ky nang: dieu khien may dong hop
 V11 Ky nang: pallet
 V12 Ky nang: pallet
 
 Ca 2
-V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
+V01 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
 V14 Ky nang: dieu khien may dong hop
 V15 Ky nang: pallet
 V17 Ky nang: pallet
 
 Ca 0
-V01 Ky nang: dieu khien may dong hop
+V06 Ky nang: dieu khien may dong hop
 V08 Ky nang: dieu khien may rot
 V10 Ky nang: pallet
 V13 Ky nang: pallet
@@ -483,106 +63,526 @@ V16 Ky nang: dieu khien may dong hop
 
 Ca 1
 V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V05 Ky nang: pallet
+V07 Ky nang: dieu khien may rot
 V09 Ky nang: dieu khien may dong hop
 V11 Ky nang: pallet
+V12 Ky nang: pallet
 
 Ca 2
 V01 Ky nang: dieu khien may dong hop
 V03 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
 V10 Ky nang: pallet
+
+Ca 0
+V03 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V06 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V11 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V13 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
+V11 Ky nang: pallet
+V12 Ky nang: pallet
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V07 Ky nang: dieu khien may rot
+V13 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+
+Ca 1
+V03 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V12 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+
+Ca 1
+V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V12 Ky nang: pallet
+
+Ca 2
+V01 Ky nang: dieu khien may dong hop
+V02 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 0
+V05 Ky nang: pallet
+V07 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V16 Ky nang: dieu khien may dong hop
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V12 Ky nang: pallet
+
+Ca 2
+V01 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 0
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V13 Ky nang: pallet
+
+Ca 2
+V01 Ky nang: dieu khien may dong hop
+V02 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V12 Ky nang: pallet
+
+Ca 0
+V07 Ky nang: dieu khien may rot
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
+V12 Ky nang: pallet
+V13 Ky nang: pallet
+
+Ca 2
+V01 Ky nang: dieu khien may dong hop
+V02 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V08 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+
+Ca 0
+V03 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V16 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V12 Ky nang: pallet
+V15 Ky nang: pallet
+
+Ca 2
+V05 Ky nang: pallet
+V08 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V11 Ky nang: pallet
+V13 Ky nang: pallet
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V06 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 2
+V03 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V12 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V06 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V03 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
+V06 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V12 Ky nang: pallet
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V08 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V11 Ky nang: pallet
 V14 Ky nang: dieu khien may dong hop
 V17 Ky nang: pallet
 
 Ca 0
+V01 Ky nang: dieu khien may dong hop
+V05 Ky nang: pallet
 V06 Ky nang: dieu khien may dong hop
 V07 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V04 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
 V13 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V06 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 1
+V03 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
 V15 Ky nang: pallet
 V16 Ky nang: dieu khien may dong hop
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V11 Ky nang: pallet
+V13 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V12 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 1
+V05 Ky nang: pallet
+V06 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V12 Ky nang: pallet
+
+Ca 1
+V06 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V08 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V12 Ky nang: pallet
+V13 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V11 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 1
+V04 Ky nang: dieu khien may rot
+V05 Ky nang: pallet
+V09 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V06 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V15 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V03 Ky nang: dieu khien may rot
+V11 Ky nang: pallet
+V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 1
+V05 Ky nang: pallet
+V08 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
+
+Ca 2
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+V17 Ky nang: pallet
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V06 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V12 Ky nang: pallet
+V13 Ky nang: pallet
 
 Ca 1
 V02 Ky nang: dieu khien may dong hop
 V03 Ky nang: dieu khien may rot
 V09 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
 V11 Ky nang: pallet
+
+Ca 2
+V05 Ky nang: pallet
+V08 Ky nang: dieu khien may rot
+V14 Ky nang: dieu khien may dong hop
+V15 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
+
+Ca 0
+V01 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V17 Ky nang: pallet
+
+Ca 1
+V02 Ky nang: dieu khien may dong hop
+V07 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
 V12 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
 
 Ca 2
 V05 Ky nang: pallet
 V06 Ky nang: dieu khien may dong hop
 V08 Ky nang: dieu khien may rot
-V14 Ky nang: dieu khien may dong hop
-V17 Ky nang: pallet
-
-Ca 0
-V01 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V13 Ky nang: pallet
-V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
-
-Ca 1
-V02 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
 V11 Ky nang: pallet
-
-Ca 2
-V01 Ky nang: dieu khien may dong hop
-V05 Ky nang: pallet
-V08 Ky nang: dieu khien may rot
-V12 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
+V14 Ky nang: dieu khien may dong hop
 
 Ca 0
+V01 Ky nang: dieu khien may dong hop
 V03 Ky nang: dieu khien may rot
-V06 Ky nang: dieu khien may dong hop
-V14 Ky nang: dieu khien may dong hop
+V09 Ky nang: dieu khien may dong hop
 V15 Ky nang: pallet
 V17 Ky nang: pallet
 
 Ca 1
 V02 Ky nang: dieu khien may dong hop
 V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V10 Ky nang: pallet
-V11 Ky nang: pallet
-
-Ca 2
 V06 Ky nang: dieu khien may dong hop
-V07 Ky nang: dieu khien may rot
 V12 Ky nang: pallet
 V13 Ky nang: pallet
+
+Ca 2
+V07 Ky nang: dieu khien may rot
+V10 Ky nang: pallet
+V11 Ky nang: pallet
 V14 Ky nang: dieu khien may dong hop
+V16 Ky nang: dieu khien may dong hop
 
 Ca 0
 V01 Ky nang: dieu khien may dong hop
 V05 Ky nang: pallet
 V08 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
 V15 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
 
 Ca 1
-V02 Ky nang: dieu khien may dong hop
-V04 Ky nang: dieu khien may rot
-V09 Ky nang: dieu khien may dong hop
-V13 Ky nang: pallet
+V03 Ky nang: dieu khien may rot
+V06 Ky nang: dieu khien may dong hop
+V10 Ky nang: pallet
+V14 Ky nang: dieu khien may dong hop
 V17 Ky nang: pallet
 
 Ca 2
-V01 Ky nang: dieu khien may dong hop
-V03 Ky nang: dieu khien may rot
-V10 Ky nang: pallet
+V02 Ky nang: dieu khien may dong hop
+V04 Ky nang: dieu khien may rot
 V12 Ky nang: pallet
-V14 Ky nang: dieu khien may dong hop
+V13 Ky nang: pallet
+V16 Ky nang: dieu khien may dong hop
 
 Ca 0
+V01 Ky nang: dieu khien may dong hop
 V05 Ky nang: pallet
-V06 Ky nang: dieu khien may dong hop
 V07 Ky nang: dieu khien may rot
+V09 Ky nang: dieu khien may dong hop
 V11 Ky nang: pallet
-V16 Ky nang: dieu khien may dong hop
 
