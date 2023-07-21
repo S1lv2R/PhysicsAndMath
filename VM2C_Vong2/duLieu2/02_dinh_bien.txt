@@ -1,0 +1,9 @@
+Day_chuyen_1 Rot 1
+Day_chuyen_1 May_dong_hop 2
+Day_chuyen_1 Pallet 2
+Day_chuyen_2 Rot 2
+Day_chuyen_2 May_dong_hop 2
+Day_chuyen_2 Pallet 2
+Day_chuyen_3 Rot 1
+Day_chuyen_3 May_dong_hop 2
+Day_chuyen_3 Pallet 3
