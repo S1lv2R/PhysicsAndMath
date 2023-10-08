@@ -116,13 +116,13 @@ int32_t main(int argc, char** argv) {
 			model.optimize();
 			assert(model.get(GRB_IntAttr_Status) == GRB_OPTIMAL);
 
-			const std::vector<int> cycle = find_minium_cycle(model, x);
+			const std::vector<int> cycle = std::move(find_minium_cycle(model, x));
 			
 			std::cout << '[';
-			for (const int& v : cycle)
+			for (const auto& v : cycle)
 				std::cout << v << ' ';
-			
 			std::cout << "]\n";
+			
 			if (cycle.size() == n) break;
 			add_subtour_elimination_constrains(model, x, cycle);
 		}	
