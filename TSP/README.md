@@ -3,16 +3,16 @@
 ## Phát biểu bài toán
 Bài toán được phát biểu như sau một người giao hàng cần đi giao hàng tại n thành phố. Xuất phát từ một thành phố nào đó, đi qua các thành phố khác để giao hàng và trở về thành phố ban đầu. Mỗi thành phố chỉ đến một lần, khoảng cách từ một thành phố đến các thành phố khác là xác định được. Giả thiết rằng mỗi thành phố đều có đường đi đến các thành phố còn lại. Khoảng cách giữa hai thành phố có thể là khoảng cách địa lý, có thể là cước phí di chuyển hoặc thời gian di chuyển. Ta gọi chung là độ dài. Hãy tìm một chu trình (một đường đi khép kín thỏa mãn điều kiện trên) sao cho tổng độ dài các cạnh là nhỏ nhất. Hay còn nói là tìm một phương án có giá nhỏ nhất.
 
-Bài toán có thể biểu diễn bởi một đồ thị có hướng có trọng số $G = (V, E)$.
-Với V là tập hợp các đỉnh, E là tập hợp các cạnh của đồ thị.
+Bài toán có thể biểu diễn bởi một đồ thị vô hướng có trọng số $G = (V, E)$.
+Với $V$ là tập hợp các đỉnh, $E$ là tập hợp các cạnh của đồ thị.
 ## Giải quyết
 ### Biến và ma trận
-Đầu tiên ta biểu diễn lại đồ thị dưới dạng ma trận $M$ khoảng cách đối xứng (symmetrical).
+Đầu tiên ta biểu diễn lại đồ thị dưới dạng ma trận $C$ khoảng cách đối xứng (symmetrical).
 
-Đầu tiên ta gọi $c_{ij}$ là khoảng cách đi từ đỉnh i sang đỉnh j. Ta sẽ biểu diễn ma trận $M$ như sau:
+Đầu tiên ta gọi $c_{ij}$ là khoảng cách đi từ đỉnh i sang đỉnh j. Ta sẽ biểu diễn ma trận $C$ như sau:
 
 $$
-M= \begin{pmatrix}
+C = \begin{pmatrix}
 c_{11} & c_{12} & \dots & c_{1n}\\  
 c_{21} & c_{22} & \dots & c_{2n} \\
 \dots & \dots & \dots & \dots \\
@@ -32,7 +32,7 @@ x_{ij} =
 \end{equation}
 $$
 
-Ta tiếp tục có ma trận $X$ là các biến $x_{ij}$, ví dụ với một chu trình như sau: 1 - 2 - 3 - 4 - 1 thì ta có một ma trận như sau:
+Ta tiếp tục có ma trận $X$ kích cỡ n x n chứa các biến $x_{ij}$, ví dụ với một chu trình như sau: 1 - 2 - 3 - 4 - 1 thì ta có một ma trận như sau:
 
 $$
 X = \begin{pmatrix}
@@ -63,7 +63,7 @@ $$
 $$x_{ii} = 0 \ \ \ \ \ \forall i \in \mathbb{N} \cap [0; n)$$
 
 4. (sub-tour elimination constraints) Đây cũng là điều kiện quan trọng nhất của bài toán, ta cần loại bỏ các chu trình con.
-   Ta có $V := {1, \dots, n }$ là tập hợp các đỉnh của đồ thị, và ta lại có $S \subset V$ thì:
+   Ta có $$V := \[ 1, 2, \dots, n \]$$ là tập hợp các đỉnh của đồ thị, và ta lại có $S \subset V$ thì:
 
 $$\sum\limits_{i \in S }\sum\limits_{j \in S}x_{ij} \leq |S| - 1 \ \ \ \ \forall S \subset V, |S| \in \mathbb{N} \cap [2; n)$$
 Nghĩa rằng khi ta có một chu trình con thì tổng các cạnh nối của chúng phải nhỏ hơn hoặc bằng tổng các đỉnh của chúng trừ 1. Điều này cho thấy rằng các chu trình con sẽ không bao giờ tồn tại.
