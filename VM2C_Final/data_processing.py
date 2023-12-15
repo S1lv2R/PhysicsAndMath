@@ -18,7 +18,7 @@ def convert_to_end_time(_time) -> int:
     else:
         return 30
 
-with open(f"data.txt", "r") as f:
+with open(f"lenh_san_xuat_Day_chuyen_1.txt", "r") as f:
     f.readline()  # Comment line
     _time = [line.strip().split() for line in f.readlines()]
 
