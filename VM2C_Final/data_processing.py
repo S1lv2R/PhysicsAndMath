@@ -1,5 +1,6 @@
 import numpy as np
 
+HOURS_PER_SHIFT = 8
 shift_time = np.zeros((29, 3), dtype=int)
 
 def convert_to_start_time(_time) -> int:
@@ -37,7 +38,7 @@ with open(f"lenh_san_xuat_Day_chuyen_1.txt", "r") as f:
         
         new_start_hour = convert_to_start_time(start_hour)
         new_end_hour = convert_to_end_time(end_hour)
-        active_shifts = (new_end_hour - new_start_hour) // 8
+        active_shifts = (new_end_hour - new_start_hour) // HOURS_PER_SHIFT
         
         shifts = [1] * active_shifts
         if (new_start_hour == shift_start_time[0]):
