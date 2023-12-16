@@ -1,4 +1,6 @@
-# VM2C FINAL
+
+
+ # VM2C FINAL ROUND
 ## Giới thiệu về kỳ thi
 **Kỳ thi Mô hình hoá Toán học Việt Nam**  (Vietnam Mathematical Modelling Competition - viết tắt là VM2C) là kỳ thi mô hình hóa toán học lần đầu tiên được tổ chức ở Việt Nam, dựa theo mô hình tổ chức cuộc thi mô hình hóa uy tín trên thế giới.
 
@@ -14,9 +16,9 @@ Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên
 Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, nó khá phức tạp trong việc xử lý file này và nó khiến mình mất khá nhiều thời gian. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
 Đề bài cho biết trong một ngày có 3 ca:
-+ Ca sáng: 6h - 14h
-+ Ca chiều: 14h - 22h
-+ Ca tối: 22h - 6h hôm sau
++ Ca sáng: 6h - 14h.
++ Ca chiều: 14h - 22h.
++ Ca tối: 22h - 6h hôm sau.
 
 ```
 Thoi_gian_bat_dau; Thoi_gian_ket_thuc
@@ -26,15 +28,41 @@ Thoi_gian_bat_dau; Thoi_gian_ket_thuc
 2023-06-03 06:00:00; 2023-06-03 22:00:00
 ```
 
-Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Và mình xử lý file trên thành ma trận $28 \times 3$ như sau:
+Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Mình sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
 
 ```
-[1 1 1] Ngày 1: có 3 ca sáng, chiều và tối 
-[1 0 1] Ngày 2: có 2 ca sáng và tối
-[1 1 0] Ngày 3: có 2 ca sáng và chiều
-[1 1 1] Ngày 4: có 3 ca sáng, chiều và tối
-[0 1 0]	Ngày 5: có 1 ca chiều
+Ngày 1: có 3 ca sáng, chiều và tối 
+Ngày 2: có 2 ca sáng và tối
+Ngày 3: có 2 ca sáng và chiều
+Ngày 4: có 3 ca sáng, chiều và tối
+Ngày 5: có 1 ca chiều
 ```
+Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
+
+$$
+ST = \begin{pmatrix}
+1 & 1 & 1\\  
+1 & 0 & 1\\
+1 & 1 & 0\\
+1 & 1 & 1 \\
+0 & 1 & 0 \\
+ & \cdots & 
+\end{pmatrix}
+$$
+
+Tương ứng với 28 ngày và 3 ca mỗi ngày, ma trận có ý nghĩa:
+
+$$
+\begin{equation*}
+ST_{ij} = 
+\begin{cases}
+      1 & \text{nếu ca làm việc thứ j vào ngày i hoạt động} \\
+      0 & \text{ngược lại}
+\end{cases}
+\ \ \ \ \ \ 1 \leq i \leq 28, \ 1 \leq j \leq 3
+\end{equation*}
+$$
+
 Source code xử lý file này: [data_processing.py](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/data_processing.py "data_processing.py")
 
 File xử lý bằng tay để kiểm tra code mình hoạt động ổn: [processed_lenh_san_xuat_Day_chuyen_1.txt](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/processed_lenh_san_xuat_Day_chuyen_1.txt "processed_lenh_san_xuat_Day_chuyen_1.txt")
