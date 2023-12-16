@@ -33,6 +33,7 @@ with open(f"lenh_san_xuat_Day_chuyen_1.txt", "r") as f:
 
         if (start_hour >= 0 and start_hour < shift_start_time[0]):
             shift_time[start_day - 1, 2] = 1
+            continue
         
         new_start_hour = convert_to_start_time(start_hour)
         new_end_hour = convert_to_end_time(end_hour)
