@@ -61,7 +61,7 @@ t_{ij} =
 \end{equation*}
 $$
 
-Từ đó ta có thể thay thế dữ liệu đã xử lý thành ma trận đơn giản và dễ hiểu hơn:
+Từ đó ta có thể thay thế dữ liệu đã xử lý thành một ma trận đơn giản và dễ hiểu hơn:
 
 $$
 T = \begin{pmatrix}
@@ -74,7 +74,7 @@ T = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-Đến đây ta đã hoàn thành trong việc xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` thành một ma trận nhị phân giúp ta thuận lợi trong việc tính toán sau này. Việc xử lý file này khá phức tạp vì nó chứa nhiều trường hợp khác nhau và nếu bất cẩn trong xử lý file này thì những thuật toán của chúng ta cho dù hoạt động tốt nhưng vẫn sẽ cho ra kết quả không chính xác.
+Đến đây ta đã hoàn thành trong việc xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` thành một ma trận nhị phân giúp ta thuận lợi trong việc tính toán sau này. Việc xử lý file này khá quan trọng, vì nếu bất cẩn trong xử lý file thì những thuật toán của chúng ta cho dù hoạt động tốt nhưng vẫn sẽ cho ra kết quả không chính xác.
 
 Ví dụ như trong ngày ``2023-06-01`` sẽ có 3 ca: sáng, chiều và tối nhưng bạn xử lý file chỉ còn mỗi 2 ca: sáng, chiều thì dẫn đến kết quả sẽ sai (vì thiếu mất ca tối).
 
