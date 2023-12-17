@@ -63,7 +63,7 @@ $$
 $$x_{ii} = 0 \ \ \ \ \ \forall i \in \mathbb{N} \cap [0; n)$$
 
 4. (sub-tour elimination constraints) Đây cũng là điều kiện quan trọng nhất của bài toán, ta cần loại bỏ các chu trình con.
-   Ta có $$V := \[ 1, 2, \dots, n \]$$ là tập hợp các đỉnh của đồ thị, và ta lại có $S \subset V$ thì:
+   Ta có $$V := \\{ 1, 2, \dots, n \\}$$ là tập hợp các đỉnh của đồ thị, và ta lại có $S \subset V$ thì:
 
 $$\sum\limits_{i \in S }\sum\limits_{j \in S}x_{ij} \leq |S| - 1 \ \ \ \ \forall S \subset V, |S| \in \mathbb{N} \cap [2; n)$$
 Nghĩa rằng khi ta có một chu trình con thì tổng các cạnh nối của chúng phải nhỏ hơn hoặc bằng tổng các đỉnh của chúng trừ 1. Điều này cho thấy rằng các chu trình con sẽ không bao giờ tồn tại. Ví dụ đơn giản ta có 3 đỉnh thì tổng số cạnh nối giữa 3 đỉnh này luôn nhỏ hơn 3 (nghĩa là 3 đỉnh này không thể trở thành một chu trình).
