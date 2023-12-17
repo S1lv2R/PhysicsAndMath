@@ -3,21 +3,11 @@ import numpy as np
 HOURS_PER_SHIFT = 8
 shift_time = np.zeros((29, 3), dtype=int)
 
-def convert_to_start_time(_time) -> int:
-    if 6 <= _time < 14:
-        return 6
-    elif 14 <= _time < 22:
-        return 14
-    else:
-        return 22
+def convert_to_start_time(_time):
+    return 6 if 6 <= _time < 14 else 14 if 14 <= _time < 22 else 22
 
-def convert_to_end_time(_time) -> int:
-    if 6 < _time <= 14:
-        return 14
-    elif 14 < _time <= 22:
-        return 22
-    else:
-        return 30
+def convert_to_end_time(_time):
+    return 14 if 6 < _time <= 14 else 22 if 14 < _time <= 22 else 30
 
 with open(f"lenh_san_xuat_Day_chuyen_1.txt", "r") as f:
     f.readline()  # Comment line
