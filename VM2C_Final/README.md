@@ -11,7 +11,7 @@ Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm
 Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên kỳ thi này khá hợp với mình. Kỳ thi này giúp bạn trông như đang nhập vai vào một nhà khoa học đang nghiên cứu vậy, mọi thứ đều phải tự tìm kiếm, nghiên cứu chứ không hề có sẵn các công cụ cho bạn dùng. Và do là toán mô hình nên không có cụ thể một lời giải nào cả, do đó bạn có thể thỏa sức sáng tạo lời giải và tối ưu chúng. Kỳ thi này giúp bạn cải thiện rất nhiều kĩ năng trong thực tế như kĩ năng giải quyết vấn đề, quản lí thời gian, làm việc nhóm, thuyết trình,... Và một khi đã học thì phải biết cách áp dụng những kiến thức đó trong thực tế.
 
 # 2. Hướng giải quyết bài toán 1a vòng 2
-> Do có giới hạn về thời gian, nên mình chỉ giải quyết bài toán 1a của vòng 2 (câu a trên dữ liệu 1).
+> Do có giới hạn về thời gian, nên mình sẽ chỉ giải quyết bài toán 1a của vòng 2 (câu a trên dữ liệu 1).
 ## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_1.txt
 Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, nó khá phức tạp trong việc xử lý file này và nó khiến mình mất khá nhiều thời gian. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
@@ -118,7 +118,7 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij}.w_{i} \geq r_{j} \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}x_{ij} * w_{i} \geq r_{j} \ \ \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -126,7 +126,7 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij} + D_{i} \leq 24 \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}x_{ij} + d_{i} \leq 24 \ \ \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -144,35 +144,41 @@ F_{2} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * n_{i}
 $$
 
 $$
-F = min(A * F_1 + B * F_2)
+OP = min(A * F_1 + B * F_2)
 $$
 
-Với A và B là các hằng số, do ta ưu tiên độ công bằng về ngày làm việc giữa các công nhân nên hằng số A lớn hơn hằng số B.
+Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
 ## 2.5. Áp dụng mô hình
 Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được kết quả như đồ thị dưới đây. Về cơ bản đây là một kết quả khá tốt đối với một mô hình khá đơn giản như của chúng ta đã làm.
 ![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
 ![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
 
-## 2.6 Nhận xét
-### Ưu điểm
+Toàn bộ source code của mình: https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final
+
+Các ý tưởng và hướng đi, mình đều dùng lại những ý tưởng mà mình chưa hoàn thành được khi đang làm bài thi này ở viện <b>VISAM</b>: https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2
+
+Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, nên thông cảm cho mình nhé.
+
+## 2.6. Nhận xét
+### 2.6.1. Ưu điểm
 Đây vốn dĩ là một mô hình khá đơn sơ, đơn giản nên rất dễ hiểu, bên cạnh đó những thứ chúng ta làm không thực sự quá nặng toán. Cơ bản là chỉ làm theo những gì đề cho.
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
-### Nhược điểm
+### 2.6.2. Nhược điểm
 Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn. Cách tốt hơn là chúng ta xét tất cả các ngày.
 
-# Tổng kết
+# 3. Tổng kết
 Do mình không hẳn là có nhiều thời gian, nên mình chỉ có thể viết bài đăng giải câu 1a thôi. Nhưng từ đó bạn đã thấy được cách hoạt động và hướng đi của mình, và bạn có thể tự nghiên cứu mà giải nốt các câu còn lại. Do đây là toán mô hình, nên không có một lời giải duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
 
-Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn luyện tư duy giải quyết vấn đề, tư duy sáng tạo trong lời giải,... Mình mong cuộc thi này sẽ phát triển và nhiều bạn trẻ sẽ tham gia hơn !
+Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn luyện tư duy giải quyết vấn đề, tư duy sáng tạo trong lời giải,... Mình mong cuộc thi này sẽ càng phát triển và nhiều bạn trẻ sẽ tham gia hơn !
 
-# Một số hình ảnh
+# 4. Một số hình ảnh
 ![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)
 ![prize2](https://github.com/SilverTD/Stuffs/assets/55396370/506fddfb-20cb-4f91-a4f3-52e1275d1f7a)
 ![vm2c](https://github.com/SilverTD/Stuffs/assets/55396370/910ab01c-cc78-47c1-a7a2-da9a1b308b2a)
 
 
-# Tài liệu tham khảo
+# 5. Tài liệu tham khảo
 ```
 - Bài làm của các bạn chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
 - Tài liệu của VM2C: https://vm2c.viasm.edu.vn/
