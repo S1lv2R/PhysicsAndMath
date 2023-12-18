@@ -1,0 +1,3 @@
+Day_chuyen_1 Rot 1
+Day_chuyen_1 May_dong_hop 2
+Day_chuyen_1 Pallet 2
