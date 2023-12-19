@@ -1,5 +1,5 @@
 from dataset import Dataset
-from constants import SHIFTS, JOBS, JOB_LIST, DAYS
+from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS
 import gurobipy as gp
 from gurobipy import GRB
 import numpy as np
@@ -15,27 +15,34 @@ def write_output(text):
     with open("./result_data_1_part_a.txt", "a") as file:
         file.write(text)
 
+def clear_file():
+    with open("./result_data_1_part_a.txt", "w") as file:
+        file.write("")
+
 def optimize_current_shift(env):
     model = gp.Model(env=env)
     vars = model.addMVar(shape=(data.workers_count, JOBS), vtype=GRB.BINARY)
-    
-    for j in range(3):
-        model.addConstr((data.skills[:, j] * W[:, j] * vars[:, j]).sum() >= data.pipeline_req[j])
 
     for i in range(data.workers_count):
+        model.addConstr(vars[i, :] <= data.skills[i, :])
         model.addConstr(vars[i, :].sum() <= 1)
-   
-    for i in range(data.workers_count):
-        model.addConstr(vars[i, :].sum() + D[i] <= 24)
+        model.addConstr(vars[i, :].sum() + D[i] <= ALLOWED_DAYS)
+    
+    for j in range(JOBS):
+        model.addConstr((W[:, j] * vars[:, j]).sum() >= data.pipeline_req[j])
 
     objective = gp.LinExpr()
     objective += vars.sum()
+    
     for i in range(data.workers_count):
-        for j in range(JOBS):
-            objective += A * (D[i] * vars[i, j]) + B * (N[i] * vars[i, j])
+        objective += (A * D[i] + B * N[i]) * vars[i, :].sum()
 
     model.setObjective(objective, sense=GRB.MINIMIZE)
     model.optimize()
+
+    if model.status == GRB.INFEASIBLE:
+        print("Solution not found")
+        exit(0)
 
     return vars.x.astype(int)
 
@@ -48,25 +55,18 @@ def run(env):
 
             global W
             
-            output = ""
             if shift_idx == 1:
-                W = W * np.logical_not(workers_chosen_last_night)
+                W *= np.logical_not(workers_chosen_last_night) # W *= ~workers_chosen_last_night
             elif shift_idx == 2:
-                for i in range(len(workers_chosen_last_night)):
-                    for j in range(JOBS):
-                        if workers_chosen_last_night[i][j] == 1:
-                            W[i, j] = 1
-
-            print(day, shift_idx)
-            print(W)
-            print(D)
-           
+                W = np.logical_or(W, workers_chosen_last_night) # W |= workers_chosen_last_night
+            
             night_shift = int(shift_idx == 3)
             workers_chosen = optimize_current_shift(env=env)
-            indices = np.argwhere(workers_chosen == 1)
+            only_workers_chosen = np.argwhere(workers_chosen == 1)
 
-            for s in range(len(indices)):
-                worker, skill = indices[s, :]
+            output = ""
+            for s in range(len(only_workers_chosen)):
+                worker, skill = only_workers_chosen[s, :]
                 W[worker, skill] = 0
                 D[worker] += 1
                 N[worker] += 1 * night_shift
@@ -85,14 +85,13 @@ def main():
     env.setParam('OutputFlag', 0)
     env.start()
     
-    global W
-    W = np.ones((data.workers_count, JOBS), dtype=int)     # Công nhân i có được làm công việc j trong ca hay không ?
+    global W, D, N
 
-    global D
+    W = np.ones((data.workers_count, JOBS), dtype=int)
     D = np.zeros((data.workers_count), dtype=int)
-
-    global N
     N = np.zeros((data.workers_count), dtype=int)
+    
+    clear_file()
 
     run(env)
     print(D, N)
