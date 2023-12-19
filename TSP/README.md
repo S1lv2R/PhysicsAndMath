@@ -87,5 +87,7 @@ $$
 
 Để khắc phục, ta sẽ cứ việc tìm nghiệm mà không cần điều kiện này. Khi ta có đã tìm được nghiệm thì sẽ kiểm tra xem chu trình này có đủ n đỉnh hay chưa ? Nếu chưa thì ta thêm điều kiện này vào để khử sub-tour và tiếp tục giải với điều kiện vừa bổ sung.
 
+Source code: [main.cpp](https://github.com/SilverTD/Stuffs/blob/main/TSP/main.cpp "main.cpp")
+
 ## Tài liệu tham khảo
 Tôi đã tham khảo tài liệu rất hay của anh Hoàng Anh Quân, đây là tài liệu mà tôi đã được tập huấn tại viện nghiên cứu cao cấp về toán VIASM cho cuộc thi VM2C 2023.
