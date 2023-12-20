@@ -9,27 +9,29 @@ A, B = 10, 1
 
 def load_input():
     global data
-    data = Dataset()
+    data = Dataset("duLieu2")
 
 def write_output(text):
-    with open("./result_data_1_part_a.txt", "a") as file:
+    with open("./result_data_2_part_a.txt", "a") as file:
         file.write(text)
 
 def clear_file():
-    with open("./result_data_1_part_a.txt", "w") as file:
+    with open("./result_data_2_part_a.txt", "w") as file:
         file.write("")
 
-def optimize_current_shift(env):
+def optimize_current_shift(env, pipeline_idx):
     model = gp.Model(env=env)
     vars = model.addMVar(shape=(data.workers_count, JOBS), vtype=GRB.BINARY)
 
     for i in range(data.workers_count):
-        model.addConstr(vars[i, :] <= data.skills[i, :])
-        model.addConstr(vars[i, :].sum() <= 1)
-        model.addConstr(vars[i, :].sum() + D[i] <= ALLOWED_DAYS)
+        model.addConstr(vars[i, :] <= data.skills[i, pipeline_idx, :])
     
     for j in range(JOBS):
-        model.addConstr((W[:, j] * vars[:, j]).sum() >= data.pipeline_req[j])
+        model.addConstr((W[:, pipeline_idx, j] * vars[:, j]).sum() >= data.pipeline_req[pipeline_idx, j])
+
+    for i in range(data.workers_count):
+        model.addConstr(vars[i, :].sum() <= 1)
+        model.addConstr(vars[i, :].sum() + D[i] <= ALLOWED_DAYS)
 
     objective = gp.LinExpr()
     objective += vars.sum()
@@ -47,36 +49,38 @@ def optimize_current_shift(env):
     return vars.x.astype(int)
 
 def run(env):
-    workers_chosen_last_night = np.zeros((data.workers_count, JOBS), dtype=int)
+    workers_chosen_last_night = np.zeros((data.workers_count, data.pipeline, JOBS), dtype=int)
     for day in range(1, len(data.shift_time)):
-        for shift_idx in range(1, len(data.shift_time[day][:]) + 1):
-            if data.shift_time[day][shift_idx - 1] < 1:
-                continue
-
-            global W
+        for pipeline_idx in range(data.pipeline):
+            for shift_idx in range(1, len(data.shift_time[day, pipeline_idx, :]) + 1):
+                if data.shift_time[day, pipeline_idx, shift_idx - 1] < 1:
+                    continue
+                
+                print(day, pipeline_idx, shift_idx)
+                global W
             
-            if shift_idx == 1:
-                W *= np.logical_not(workers_chosen_last_night) # W *= ~workers_chosen_last_night
-            elif shift_idx == 2:
-                W = np.logical_or(W, workers_chosen_last_night) # W |= workers_chosen_last_night
+                if shift_idx == 1:
+                    W[:, pipeline_idx, :] *= np.logical_not(workers_chosen_last_night[:, pipeline_idx, :])
+                elif shift_idx == 2:
+                    W[:, pipeline_idx, :] = np.logical_or(W[:, pipeline_idx, :], workers_chosen_last_night[:, pipeline_idx, :])
             
-            night_shift = int(shift_idx == 3)
-            workers_chosen = optimize_current_shift(env=env)
-            only_workers_chosen = np.argwhere(workers_chosen == 1)
+                night_shift = int(shift_idx == 3)
+                workers_chosen = optimize_current_shift(env, pipeline_idx)
+                only_workers_chosen = np.argwhere(workers_chosen == 1)
 
-            output = ""
-            for s in range(len(only_workers_chosen)):
-                worker, skill = only_workers_chosen[s, :]
-                W[worker, skill] = 0
-                D[worker] += 1
-                N[worker] += 1 * night_shift
+                output = ""
+                for s in range(len(only_workers_chosen)):
+                    worker, skill = only_workers_chosen[s, :]
+                    W[worker, pipeline_idx, skill] = 0
+                    D[worker] += 1
+                    N[worker] += 1 * night_shift
 
-                output += f"{day:02d}.06.2023 Ca_{shift_idx} V{(worker + 1):02d} Day_chuyen_1 {JOB_LIST[skill]}\n"
+                    output += f"{day:02d}.06.2023 Ca_{shift_idx} V{(worker + 1):02d} Day_chuyen_{pipeline_idx + 1} {JOB_LIST[skill]}\n"
             
-            if night_shift:
-                workers_chosen_last_night = workers_chosen
-            write_output(output)
-        W = np.ones((data.workers_count, JOBS), dtype=int)
+                if night_shift:
+                    workers_chosen_last_night[:, pipeline_idx, :] = workers_chosen
+                write_output(output)
+        W = np.ones((data.workers_count, data.pipeline, JOBS), dtype=int)
 
 def main():
     load_input()
@@ -87,7 +91,7 @@ def main():
     
     global W, D, N
 
-    W = np.ones((data.workers_count, JOBS), dtype=int)
+    W = np.ones((data.workers_count, data.pipeline, JOBS), dtype=int)
     D = np.zeros((data.workers_count), dtype=int)
     N = np.zeros((data.workers_count), dtype=int)
     
