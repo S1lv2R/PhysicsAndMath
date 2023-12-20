@@ -5,17 +5,23 @@
 
 Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm ra giải pháp cho một vấn đề mở, thường thì không giống các bài tập về nhà hay dự án nhóm trên lớp học thông thường. Kỹ năng quản lý thời gian, làm việc nhóm, viết và trình bày báo cáo cũng quan trọng không kém khả năng tìm hiểu các kiến thức mới và tư duy ứng dụng vào thực tế.
 
-Đây là một kỳ thi khá hay và mới lạ, nó hoàn toàn khác so với các kỳ thi học sinh giỏi khác. Và đội của mình cũng là đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này !
+Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết cho thế kỷ 21. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
 
 ## 1.2. Cảm nhận về kỳ thi
-Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên kỳ thi này khá hợp với mình. Kỳ thi này giúp bạn trông như đang nhập vai vào một nhà khoa học đang nghiên cứu vậy, mọi thứ đều phải tự tìm kiếm, nghiên cứu chứ không hề có sẵn các công cụ cho bạn dùng. Và do là toán mô hình nên không có cụ thể một lời giải nào cả, do đó bạn có thể thỏa sức sáng tạo lời giải và tối ưu chúng. Kỳ thi này giúp bạn cải thiện rất nhiều kĩ năng trong thực tế như kĩ năng giải quyết vấn đề, quản lí thời gian, làm việc nhóm, thuyết trình,... Và một khi đã học thì phải biết cách áp dụng những kiến thức đó trong thực tế.
+Mình là người thích nghiên cứu nhưng lại ghét làm bài tập, vì vậy mình rất thích kỳ thi VM2C. Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
+
+Bên cạnh đó, do là toán mô hình nên không có một lời giải cụ thể nào, điều này cho phép chúng ta thỏa sức sáng tạo lời giải và tối ưu chúng.
+
+Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết trong thực tế, chẳng hạn như kỹ năng giải quyết vấn đề, quản lý thời gian, làm việc nhóm và thuyết trình. Minh tin rằng những kỹ năng này sẽ giúp ích rất nhiều trong tương lai.
 
 # 2. Hướng giải quyết bài toán 1a vòng 2
 
 > Do có giới hạn về thời gian, nên mình sẽ chỉ giải quyết bài toán 1a của vòng 2 (câu a trên dữ liệu 1).
+ 
+> Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
 ## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_1.txt
-Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, nó khá phức tạp trong việc xử lý file này và nó khiến mình mất khá nhiều thời gian. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
+Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
 Đề bài cho biết trong một ngày có 3 ca:
 + Ca sáng: 6h - 14h.
@@ -30,7 +36,7 @@ Thoi_gian_bat_dau; Thoi_gian_ket_thuc
 2023-06-03 06:00:00; 2023-06-03 22:00:00
 ```
 
-Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Mình sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
+Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Ta sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
 
 ```
 Ngày 1: có 3 ca sáng, chiều và tối 
@@ -39,7 +45,7 @@ Ngày 3: có 2 ca sáng và chiều
 Ngày 4: có 3 ca sáng, chiều và tối
 Ngày 5: có 1 ca chiều
 ```
-Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
+Tuy nhiên để thuận tiện trong tính toán, ta sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
 
 $$
 T_{28 \times 3} = \begin{pmatrix}
@@ -82,12 +88,12 @@ Ví dụ như trong ngày ``2023-06-01`` sẽ có 3 ca: sáng, chiều và tối
 
 Source code xử lý file này: [data_processing.py](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/data_processing.py "data_processing.py")
 
-File xử lý bằng tay để kiểm tra code mình hoạt động ổn: [processed_lenh_san_xuat_Day_chuyen_1.txt](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/processed_lenh_san_xuat_Day_chuyen_1.txt "processed_lenh_san_xuat_Day_chuyen_1.txt")
+File xử lý bằng tay để kiểm tra code hoạt động ổn: [processed_lenh_san_xuat_Day_chuyen_1.txt](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/processed_lenh_san_xuat_Day_chuyen_1.txt "processed_lenh_san_xuat_Day_chuyen_1.txt")
 
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ij} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân i được chọn làm ca làm việc $j$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ij} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ hay không.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ij} \\}$ là ma trận chứa các biến $b_{ij}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ hay không.
 
@@ -104,7 +110,7 @@ Ta sẽ xét từng ca trong mỗi ngày, ta xét ngày thứ $l$:
 
 $$
 \begin{aligned}
-x_{ij} \leq b_{ij} \ \ \ \ \ \forall i, j > 0
+x_{ij} \leq b_{ij} \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -112,15 +118,15 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{j}^{}x_{ij} \leq 1 \ \ \ \ \ \forall i, j > 0
+\sum\limits_{j}^{}x_{ij} \leq 1 \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
-3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{j}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay.:
+3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{j}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij} * w_{i} \geq r_{j} \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ij} * w_{i}) \geq r_{j} \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -128,51 +134,80 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij} + d_{i} \leq 24 \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ij} + d_{i}) \leq 24 \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
 ##  2.4. Hàm mục tiêu
-Mục tiêu của chúng ta sẽ là tối ưu số ca làm việc là nhỏ nhất và đạt sự công bằng nhất giữa các công nhân. Điều này có nghĩa độ chênh lệch số ngày làm việc và số ca đêm làm việc của các công nhân là nhỏ nhất có thể.
-
-Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ngày, số ca đêm nhỏ nhất. Điều đó có nghĩa:
+Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng công nhân tham gia làm việc luôn phải là nhỏ nhất:
 
 $$
-F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * d_{i}
+F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij}
 $$
 
-$$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * n_{i}
-$$
+Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-OP = min(A * F_1 + B * F_2)
+F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * d_{i})
+$$
+
+Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
+
+$$
+F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * n_{i})
+$$
+
+Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm các trọng số sao cho hợp lý nhất:
+
+$$
+OP = F_1 + A * F_2 + B * F_3
 $$
 
 Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
 ## 2.5. Áp dụng mô hình
 Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được kết quả như đồ thị dưới đây. Về cơ bản đây là một kết quả khá tốt đối với một mô hình khá đơn giản như của chúng ta đã làm.
-![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
-![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
+
+![NQD_chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/9f710531-5afa-43ed-98e8-627e39b171f3)
+![NQD_chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/8ed936d1-d230-45b4-8427-b0320bab11b4)
+
+Ở đồ thị (1), ta thấy được $max = 22$ và $min = 16$:
+- $max - min = 22 - 16 = 6$
+- Trung bình: $\overline{x} \approx 19.41$
+- Độ lệch chuẩn: $\sigma \approx 2.14$
+
+Tương tự ở đồ thị (2), ta thấy được $max = 10$ và $min = 3$:
+- $max - min = 10 - 3 = 7$
+- Trung bình: $\overline{x} \approx 6.17$
+- Độ lệch chuẩn: $\sigma \approx 2.3$
+
+Từ các số liệu vừa tính toán ở trên, ta thấy được kết quả của chúng ta không hẳn là quá tệ. Các dữ liệu phân tán có thể xem là khá đồng đều.
+
+Một số công nhân có số ngày ít thường là các công nhân chỉ có kỹ năng "Rot", vì trong mỗi ca, kỹ năng "Rot" chỉ cần 1 người làm duy nhất. Nên hiển nhiên các công nhân đó có số ca làm việc ít hơn.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
-Các ý tưởng và hướng đi, mình đều dùng lại những ý tưởng mà mình chưa hoàn thành được khi đang làm bài thi này ở viện <b>VISAM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
+Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đều là những ý tưởng, suy nghĩ của mình khi đang làm bài thi ở viện nghiên cứu <b>VIASM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
 
 Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, nên thông cảm cho mình nhé.
 
 ## 2.6. Nhận xét
 ### 2.6.1. Ưu điểm
 Đây vốn dĩ là một mô hình khá đơn sơ, đơn giản nên rất dễ hiểu, bên cạnh đó những thứ chúng ta làm không thực sự quá nặng toán. Cơ bản là chỉ làm theo những gì đề cho.
+
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
 ### 2.6.2. Nhược điểm
-Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn. Cách tốt hơn là chúng ta xét tất cả các ngày.
+Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu.
+
+### 2.6.3. Cải thiện
+Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.
+
+Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
 
 # 3. Tổng kết
-Do mình không hẳn là có nhiều thời gian, nên mình chỉ có thể viết bài đăng giải câu 1a thôi. Nhưng từ đó bạn đã thấy được cách hoạt động và hướng đi của mình, và bạn có thể tự nghiên cứu mà giải nốt các câu còn lại. Do đây là toán mô hình, nên không có một lời giải duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
+Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu 1a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được hướng giải quyết và từ đó hình thành tư duy để giải quyết các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
 
-Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn luyện tư duy giải quyết vấn đề, tư duy sáng tạo trong lời giải,... Mình mong cuộc thi này sẽ càng phát triển và nhiều bạn trẻ sẽ tham gia hơn !
+Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm một lần.
 
 # 4. Một số hình ảnh
 ![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)
@@ -182,6 +217,6 @@ Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn
 
 # 5. Tài liệu tham khảo
 ```
-- Bài làm của các bạn chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
+- Bài làm của đội trường chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
 - Tài liệu của VM2C: https://vm2c.viasm.edu.vn/
 ```
