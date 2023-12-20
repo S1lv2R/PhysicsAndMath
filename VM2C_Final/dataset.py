@@ -17,7 +17,7 @@ class Dataset:
 
         match folder[-1]:
             case "1":
-                self.pipeline_req = ((1, 2, 2))
+                self.pipeline_req = ((1, 2, 2), )
             case "2":
                 self.pipeline_req = ((1, 2, 2), (2, 2, 2), (1, 2, 3))
         self.pipeline_req = np.array(self.pipeline_req)
@@ -31,9 +31,9 @@ class Dataset:
                               for worker in _names)
 
             self.workers_count = len(self.names)
-            self.skills = np.array([
-                [[0] * JOBS for _ in range(self.pipeline)] for _ in range(self.workers_count)
-            ])
+            self.skills = np.array(
+                [[0] * JOBS for _ in range(self.workers_count)]
+            )
         
         for pipeline_idx in range(self.pipeline):
             for job_idx in range(JOBS):
@@ -42,7 +42,7 @@ class Dataset:
                     worker_list = [line.strip() for line in f.readlines()]
                     for worker_name in worker_list:
                         worker = self.names[worker_name]
-                        self.skills[worker][pipeline_idx][job_idx] = 1
+                        self.skills[worker][job_idx] = 1
 
         convert_to_start_time = lambda _time: 6 if 6 <= _time < 14 else 14 if 14 <= _time < 22 else 22
         convert_to_end_time = lambda _time: 14 if 6 < _time <= 14 else 22 if 14 < _time <= 22 else 30
