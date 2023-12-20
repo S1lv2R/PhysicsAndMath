@@ -14,9 +14,9 @@ Bên cạnh đó, do là toán mô hình nên không có một lời giải cụ
 
 Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết trong thực tế, chẳng hạn như kỹ năng giải quyết vấn đề, quản lý thời gian, làm việc nhóm và thuyết trình. Minh tin rằng những kỹ năng này sẽ giúp ích rất nhiều trong tương lai.
 
-# 2. Hướng giải quyết bài toán 1a vòng 2
+# 2. Hướng giải quyết bài toán a vòng 2
 
-> Do có giới hạn về thời gian, nên mình sẽ chỉ giải quyết bài toán 1a của vòng 2 (câu a trên dữ liệu 1).
+> Do có giới hạn về thời gian, nên mình sẽ chỉ giải quyết bài toán a của vòng 2 (câu a trên dữ liệu 1 và dữ liệu 2).
  
 > Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
@@ -165,6 +165,9 @@ $$
 
 Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
 ## 2.5. Áp dụng mô hình
+### 2.5.1 Dữ liệu 1
+**Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
+
 Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được kết quả như đồ thị dưới đây. Về cơ bản đây là một kết quả khá tốt đối với một mô hình khá đơn giản như của chúng ta đã làm.
 
 ![NQD_chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/9f710531-5afa-43ed-98e8-627e39b171f3)
@@ -183,6 +186,26 @@ Tương tự ở đồ thị (2), ta thấy được $max = 10$ và $min = 3$:
 Từ các số liệu vừa tính toán ở trên, ta thấy được kết quả của chúng ta không hẳn là quá tệ. Các dữ liệu phân tán có thể xem là khá đồng đều.
 
 Một số công nhân có số ngày ít thường là các công nhân chỉ có kỹ năng "Rot", vì trong mỗi ca, kỹ năng "Rot" chỉ cần 1 người làm duy nhất. Nên hiển nhiên các công nhân đó có số ca làm việc ít hơn.
+
+### 2.5.2 Dữ liệu 2
+**Dữ liệu** 2 ý (a) với 55 nhân sự, tổng công là 1116.
+
+Có một điều mà ta sẽ phải khá bất ngờ từ kết quả mà thuật toán ta tạo ra, dưới đây là đồ thị của kết quả:
+
+![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/f384de9e-53c4-4cb0-8850-5f46ff0cf66f)
+![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/307c0809-e4fe-4e74-9f9c-b2893077ceaa)
+
+Ở đồ thị (1), ta thấy được $max = 22$ và $min = 19$:
+- $max - min = 22 - 19 = 3$
+- Trung bình: $\overline{x} \approx 20.29$
+- Độ lệch chuẩn: $\sigma \approx 0.65$
+
+Tương tự ở đồ thị (2), ta thấy được $max = 12$ và $min = 0$:
+- $max - min = 12 - 0 = 12$
+- Trung bình: $\overline{x} \approx 6.49$
+- Độ lệch chuẩn: $\sigma \approx 3.17$
+
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt độ lệch chuẩn chỉ 0.65, nên các dữ liệu phân bố khá đồng đều với $max - min = 3$. Tuy nhiên ngược lại là độ lệch chuẩn của số ca đêm giữa các công nhân là rất cao $3.17$, nên dữ liệu dao động quanh giá trị trung bình khá nhiều $max - min = 12$. Từ đó có thể thấy chúng ta chưa hoàn toàn tối ưu được độ công bằng ca đêm giữa các công nhân.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
