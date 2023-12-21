@@ -66,36 +66,35 @@ def run(env, data_pack):
 
                 magic_pointer += 1
                     
-                print(f"[Log] day: {day}, pipeline: {pipeline_idx + 1}, shift: {shift_idx}")
+                print(f"[Log] day: {day}, pipeline: {pipeline_idx + 1}, shift: {shift_idx}, magic_pointer: {magic_pointer}")
 
                 if magic_pointer == 1:
-                    W *= np.logical_not(workers_chosen_last_night)
-                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx > 1 and day > 1:
-                    W = np.logical_or(W, workers_chosen_last_night)
+                    W &= np.logical_not(workers_chosen_last_night)
+                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx + day > 2:
+                    W |= workers_chosen_last_night
 
                 night_shift = int(shift_idx == 3)
                 workers_chosen = optimize_current_shift(env, pipeline_idx)
                 only_workers_chosen = np.argwhere(workers_chosen == 1)
 
-                output = ""
-                for s in range(len(only_workers_chosen)):
-                    worker, skill = only_workers_chosen[s, :]
-                    W[worker] = 0
-                    D[worker] += 1
+                for (worker, skill) in only_workers_chosen:
                     N[worker] += 1 * night_shift
+                    D[worker] += 1
+                    W[worker] = 0
 
-                    output += f"{day:02d}.06.2023 Ca_{shift_idx} V{(worker + 1):02d} Day_chuyen_{pipeline_idx + 1} {JOB_LIST[skill]}\n"
-
+                    write_output(
+                            f"{day:02d}.06.2023 Ca_{shift_idx} V{(worker + 1):02d} Day_chuyen_{pipeline_idx + 1} {JOB_LIST[skill]}\n",
+                            data_pack
+                    )
+                    
                 if night_shift:
-                    one_row_workers_chosen = [workers_chosen[i].sum() for i in range(data.workers_count)]
+                    one_row_workers_chosen = np.array([workers_chosen[i].sum() for i in range(data.workers_count)])
                     workers_chosen_last_night = (
-                            one_row_workers_chosen
-                            if last_night != day
-                            else np.logical_or(workers_chosen_last_night, one_row_workers_chosen)
+                            one_row_workers_chosen if last_night != day
+                            else workers_chosen_last_night | one_row_workers_chosen
                     )
                     last_night = day
 
-                write_output(output, data_pack)
         W = np.ones((data.workers_count), dtype=int)
 
 def main():
