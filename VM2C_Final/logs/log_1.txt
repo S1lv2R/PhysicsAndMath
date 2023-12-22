@@ -1,0 +1,45 @@
+	    ________________________________________________________________________________
+	    
+            Data with constants: A = 10, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.1436314303868937 <-- (Best result)
+            The standard deviation between workers' night shifts:	2.357348812883986  <-- (Best result)
+            ________________________________________________________________________________
+            Data with constants: A = 5, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.2244318119045925
+            The standard deviation between workers' night shifts:	3.110424486212302
+            ________________________________________________________________________________
+            
+            Data with constants: A = 1.5, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.787763673193597
+            The standard deviation between workers' night shifts:	3.3647881520176686
+            ________________________________________________________________________________
+            
+            Data with constants: A = 2.5, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.4024209243131924
+            The standard deviation between workers' night shifts:	3.240103377393038
+            ________________________________________________________________________________
+            
+            Data with constants: A = 10, B = 5, C = 1.3.
+            The standard deviation between workers' shifts:      	2.613512928414478
+            The standard deviation between workers' night shifts:	3.311926649472764
+            ________________________________________________________________________________
+
+            Data with constants: A = 10, B = 2, C = 1.3.
+            The standard deviation between workers' shifts:      	2.2244318119045925
+            The standard deviation between workers' night shifts:	3.110424486212302
+            ________________________________________________________________________________
+            
+            Data with constants: A = 10, B = 8, C = 1.3.
+            The standard deviation between workers' shifts:      	3.290964877811615
+            The standard deviation between workers' night shifts:	3.853726906860988
+            ________________________________________________________________________________
+            
+            Data with constants: A = 20, B = 8, C = 1.3.
+            The standard deviation between workers' shifts:      	2.4024209243131924
+            The standard deviation between workers' night shifts:	3.240103377393038
+            ________________________________________________________________________________
+            
+            Data with constants: A = 20, B = 10, C = 1.3.
+            The standard deviation between workers' shifts:      	2.613512928414478
+            The standard deviation between workers' night shifts:	3.311926649472764
+            ________________________________________________________________________________
