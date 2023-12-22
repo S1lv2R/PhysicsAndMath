@@ -1,4 +1,4 @@
-from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS
+from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS, A, B, C
 from dataset import Dataset
 from gurobipy import GRB
 import gurobipy as gp
@@ -6,7 +6,6 @@ import numpy as np
 import sys
 
 data, W, D, N = None, None, None, None
-A, B, C = 10, 1, 1.3
 
 def load_input(data_pack):
     global data

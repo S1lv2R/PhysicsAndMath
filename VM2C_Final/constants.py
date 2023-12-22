@@ -10,3 +10,5 @@ SHIFTS = DAYS * 3
 JOBS = 3 
 
 JOB_LIST = ["Rot", "May_dong_hop", "Pallet"]
+
+A, B, C = 10, 1, 1.3
