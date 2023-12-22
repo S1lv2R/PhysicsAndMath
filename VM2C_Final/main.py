@@ -65,14 +65,14 @@ def run(env, data_pack):
     last_night = 0
 
     global W
-    
+   
     for day in range(1, len(data.shift_time)):
         magic_pointer = 0
         for shift_idx in range(1, JOBS + 1):
             for pipeline_idx in range(data.pipeline):
                 if data.shift_time[day, pipeline_idx, shift_idx - 1] < 1:
                     continue
-
+                
                 magic_pointer += 1
                     
                 print(f"[Log] day: {day}, pipeline: {pipeline_idx + 1}, shift: {shift_idx}, magic_pointer: {magic_pointer}")
@@ -82,9 +82,9 @@ def run(env, data_pack):
 
                 if magic_pointer == 1:
                     W &= np.logical_not(workers_chosen_last_night)
-                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx + day > 2:
+                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx > 1 and day > 1:
                     W |= workers_chosen_last_night
-
+               
                 night_shift = int(shift_idx == 3)
                 workers_chosen = optimize_current_shift(env, pipeline_idx, night_shift)
 
@@ -92,7 +92,7 @@ def run(env, data_pack):
                     for skill in range(JOBS):
                         if workers_chosen[worker][skill] < 1:
                             continue
-                        
+
                         N[worker] += 1 * night_shift
                         D[worker] += 1
                         W[worker] = 0
@@ -109,7 +109,6 @@ def run(env, data_pack):
                         else workers_chosen_last_night | one_row_workers_chosen
                     )
                     last_night = day
-
         W = np.ones(data.workers_count, dtype=int)
 
 def main():

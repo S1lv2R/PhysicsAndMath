@@ -1,7 +1,7 @@
 
             ________________________________________________________________________________
             
-            The standard deviation between workers' shifts:      	1.4853555102181895
-            The standard deviation between workers' night shifts:	1.9341216213777748
+            The standard deviation between workers' shifts:      	1.497546202325382
+            The standard deviation between workers' night shifts:	1.7042484589746165
             ________________________________________________________________________________
             
