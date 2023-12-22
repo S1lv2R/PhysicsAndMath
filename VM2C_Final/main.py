@@ -1,4 +1,4 @@
-from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS, A, B, C
+from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS, C
 from dataset import Dataset
 from gurobipy import GRB
 import gurobipy as gp
@@ -20,36 +20,36 @@ def write_the_schedule(text, data_pack):
         file.write(text)
 
 def write_log(data_pack):
-    with open(f"./logs/log_{data_pack}.txt", "a") as file:
+    with open(f"./logs/log_{data_pack}.txt", "w") as file:
         file.write(
             f"""
-            Data with constants: A = {A}, B = {B}, C = {C}.
+            ________________________________________________________________________________
+            
             The standard deviation between workers' shifts:      \t{np.std(D)}
             The standard deviation between workers' night shifts:\t{np.std(N)}
             ________________________________________________________________________________
             """
         )
 
-def optimize_current_shift(env, pipeline_idx):
+def optimize_current_shift(env, pipeline_idx, night_shift):
     model = gp.Model(env=env)
     vars = model.addMVar(shape=(data.workers_count, JOBS), vtype=GRB.BINARY)
 
     for i in range(data.workers_count):
         model.addConstr(vars[i] <= data.skills[i, pipeline_idx, :])  # Workers only do jobs that match their skills.
         model.addConstr(vars[i].sum() <= 1)                          # Workers only do one job per shift.
-        model.addConstr(vars[i].sum() + D[i] <= ALLOWED_DAYS)        # Workers only work a maximum of 24 days.
+        model.addConstr(vars[i].sum() + D[i] <= ALLOWED_DAYS)        # Workers only work a maximum of {ALLOWED_DAYS} days.
     
     # Each shift must have a sufficient number of workers.
     for j in range(JOBS):
         model.addConstr(
-                (W * vars[:, j]).sum() >= data.pipeline_req[pipeline_idx, j]) 
+                (W * vars[:, j]).sum() >= data.pipeline_req[pipeline_idx, j])
 
     objective = gp.LinExpr()
     objective += vars.sum()
     
-    # Objective: OP = F_1 + A * F_2 + B * F_3
     for i in range(data.workers_count):
-        objective += (C if data.skills[i].sum() > 1 else 1) * (A * D[i] + B * N[i]) * vars[i].sum()
+        objective += (C if data.skills[i].sum() > 1 else 1) * (N[i] if night_shift else D[i]) * vars[i].sum()
     
     model.setObjective(objective, sense=GRB.MINIMIZE)
     model.optimize()
@@ -83,10 +83,10 @@ def run(env, data_pack):
                 if magic_pointer == 1:
                     W &= np.logical_not(workers_chosen_last_night)
                 elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx + day > 2:
-                    W |= workers_chosen_last_night 
+                    W |= workers_chosen_last_night
 
                 night_shift = int(shift_idx == 3)
-                workers_chosen = optimize_current_shift(env, pipeline_idx)
+                workers_chosen = optimize_current_shift(env, pipeline_idx, night_shift)
 
                 for worker in range(len(workers_chosen)):
                     for skill in range(JOBS):
