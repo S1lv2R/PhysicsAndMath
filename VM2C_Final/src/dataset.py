@@ -1,5 +1,5 @@
 import numpy as np
-from constants import JOBS, JOB_LIST, SHIFTS, HOURS_PER_SHIFT
+from constants import JOBS, JOB_LIST, HOURS_PER_SHIFT
 
 class Dataset:
     def __init__(self, folder):
@@ -8,7 +8,7 @@ class Dataset:
                 "duLieu2": 3
         }
 
-        self.data_path = f"./data/{folder}/"
+        self.data_path = f"../data/{folder}/"
         self.workers_count = 0
         self.skills = []
         self.pipeline = pipelines[folder]

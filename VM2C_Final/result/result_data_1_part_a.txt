@@ -326,5 +326,5 @@
 28.06.2023 Ca_3 V01 Day_chuyen_1 May_dong_hop
 28.06.2023 Ca_3 V08 Day_chuyen_1 Rot
 28.06.2023 Ca_3 V10 Day_chuyen_1 Pallet
-28.06.2023 Ca_3 V14 Day_chuyen_1 May_dong_hop
 28.06.2023 Ca_3 V15 Day_chuyen_1 Pallet
+28.06.2023 Ca_3 V16 Day_chuyen_1 May_dong_hop

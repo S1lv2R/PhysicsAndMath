@@ -1,4 +1,4 @@
-from constants import SHIFTS, JOBS, JOB_LIST, DAYS, ALLOWED_DAYS, C
+from constants import JOBS, JOB_LIST, DAYS, ALLOWED_DAYS, C
 from dataset import Dataset
 from gurobipy import GRB
 import gurobipy as gp
@@ -12,15 +12,15 @@ def load_input(data_pack):
     data = Dataset(f"duLieu{data_pack}")
 
 def clear_file(data_pack):
-    with open(f"./result/result_data_{data_pack}_part_a.txt", "w") as file:
+    with open(f"../result/result_data_{data_pack}_part_a.txt", "w") as file:
         file.write("")
 
 def write_the_schedule(text, data_pack):
-    with open(f"./result/result_data_{data_pack}_part_a.txt", "a") as file:
+    with open(f"../result/result_data_{data_pack}_part_a.txt", "a") as file:
         file.write(text)
 
 def write_log(data_pack):
-    with open(f"./logs/log_{data_pack}.txt", "w") as file:
+    with open(f"../logs/log_{data_pack}.txt", "w") as file:
         file.write(
             f"""
             ________________________________________________________________________________
@@ -82,7 +82,7 @@ def run(env, data_pack):
 
                 if magic_pointer == 1:
                     W &= np.logical_not(workers_chosen_last_night)
-                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx > 1 and day > 1:
+                elif magic_pointer == np.sum(data.shift_time[day, :, shift_idx - 2]) + 1 and shift_idx > 1:
                     W |= workers_chosen_last_night
                
                 night_shift = int(shift_idx == 3)
