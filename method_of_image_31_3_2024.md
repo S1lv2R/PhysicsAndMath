@@ -1,6 +1,7 @@
-# Ảnh điện trong điện môi
+# Ảnh điện và sự phân cực trong môi trường điện môi (31/3/2024)
+## Điều kiện biên
 
-Điều kiện biên:
+Theo phương pháp tuyến thì vector cảm ứng điện là liên tục ($\sigma_f = 0$), trong khi vector cường độ điện trường thì không (vì còn điện tích liên kết $\sigma_p$):
 
 $$
 \begin{equation}
@@ -16,7 +17,7 @@ E_{2t} - E_{1t} = 0
 \end{equation}
 $$
 
-Trong trường tĩnh điện, điện trường không đổi do đó $\nabla \times \bold{E} = 0$, ngược lại $\nabla \times \bold{D} = \nabla \times \bold{P} \not= 0$.
+Trong trường tĩnh điện, điện trường không đổi do đó $\nabla \times \mathbf{E} = 0$, ngược lại $\nabla \times \mathbf{D} = \nabla \times \mathbf{P} \not= 0$.
 
 Tuy nhiên nếu dùng định lý Gauss cho vector điện trường:
 
@@ -26,20 +27,20 @@ E_{2n} - E_{1n} = \sigma
 \end{equation}
 $$
 
-Thì lúc này, mật độ điện tích $\sigma = \sigma_f + \sigma_p$ bao gồm mật độ điện tích tự do và mật độ điện tích phân cực.
+Thì lúc này, mật độ điện tích $\sigma = \sigma_f + \sigma_p$ bao gồm mật độ điện tích tự do và mật độ điện tích liên kết mặt.
 
-Do đó ta thường sử dụng vector cảm ứng điện $\bold{D}$ nhằm dễ dàng tìm được vector điện trường $\bold{E}$, vì $\bold{D}$ pháp tuyến liên tục tại mặt phân cách, trong khi $\bold{E}$ thì không.
+Do đó ta thường sử dụng vector cảm ứng điện $\mathbf{D}$ nhằm dễ dàng tìm được vector điện trường $\mathbf{E}$, vì $\mathbf{D}$ pháp tuyến liên tục tại mặt phân cách, trong khi $\mathbf{E}$ thì không.
 
 ## Một số câu hỏi thắc mắc và câu trả lời của mình
 > 1. Tại sao một điện tích điểm đặt trong điện môi thì điện trường bị giảm đi một hằng số điện môi
 
-Khi đặt điện tích trong môi trường điện môi rộng vô hạn, khi đó điện tích gây ra một điện trường $\bold{E}$ khiến môi trường điện môi bị phân cực. Ta sẽ đi chứng minh điều này:
+Khi đặt điện tích trong môi trường điện môi rộng vô hạn, khi đó điện tích gây ra một điện trường $\mathbf{E}$ khiến môi trường điện môi bị phân cực. Ta sẽ đi chứng minh điều này:
 
 Sử dụng định lý <i>Gauss</i> cho vector cảm ứng điện, ta tìm được vector cảm ứng điện:
 
 $$
 \begin{equation}
-\bold{D} = \frac{q}{4\pi r^2} \hat{r}
+\mathbf{D} = \frac{q}{4\pi r^2} \hat{r}
 \end{equation}
 $$
 
@@ -47,7 +48,7 @@ Từ đây ta tìm được điện trường trong điện môi:
 
 $$
 \begin{equation}
-\bold{E} = \frac{\bold{D}}{\epsilon} = \frac{q}{4\pi \epsilon r^2} \hat{r}
+\mathbf{E} = \frac{\mathbf{D}}{\epsilon} = \frac{q}{4\pi \epsilon r^2} \hat{r}
 \end{equation}
 $$
 
@@ -55,7 +56,7 @@ Ta có công thức độ phân cực:
 
 $$
 \begin{equation}
-\bold{P} = \bold{D} - \epsilon_0 \bold{E} = \frac{q}{4\pi}(\frac{\epsilon - \epsilon_0}{\epsilon}) \frac{\hat{r}}{r^2}
+\mathbf{P} = \mathbf{D} - \epsilon_0 \mathbf{E} = \frac{q}{4\pi}(\frac{\epsilon - \epsilon_0}{\epsilon}) \frac{\hat{r}}{r^2}
 \end{equation}
 $$
 
@@ -63,12 +64,12 @@ Vậy mật độ điện tích khối lúc này là:
 
 $$
 \begin{equation}
-\rho_p = -\nabla \cdot \bold{P} = \frac{q}{4\pi}(\frac{\epsilon - \epsilon_0}{\epsilon}) \nabla  (\frac{\hat{r}}{r^2})
- = -q(\frac{\epsilon - \epsilon_0}{\epsilon}) \delta^3(\bold{r})
+\rho_p = -\nabla \cdot \mathbf{P} = \frac{q}{4\pi}(\frac{\epsilon - \epsilon_0}{\epsilon}) \nabla  (\frac{\hat{r}}{r^2})
+ = -q(\frac{\epsilon - \epsilon_0}{\epsilon}) \delta^3(\mathbf{r})
  \end{equation}
 $$
 
-Trong đó $\delta^3(\bold{r})$ là hàm <i>Dirac Delta</i>. Mật độ điện tích $\rho_p$ chỉ có tại vị trí điện tích điểm $q$. Vậy điện môi bị phân cực tại bề mặt tiếp xúc với điện tích $q$ và trái dấu với điện tích.
+Trong đó $\delta^3(\mathbf{r})$ là hàm <i>Dirac Delta</i>. Mật độ điện tích khối $\rho_p$ chỉ có tại vị trí điện tích điểm $q$. Vậy điện môi bị phân cực tại bề mặt tiếp xúc với điện tích $q$ và trái dấu với điện tích.
 
 Tổng điện tích lúc này bao gồm $Q = q + q_p = \dfrac{q}{\epsilon_r}$.
 
@@ -80,11 +81,11 @@ Ngược lại, nếu môi trường điện môi là hữu hạn thì ta không
 
 Khi này điện tích $Q$ gây ra điện trường làm phân cực điện môi, tuy nhiên quả cầu điện môi sẽ bị phân cực thành phần âm và phần dương (vì chất điện môi lúc này là hữu hạn). Phần âm tại bề mặt tiếp xúc với $Q$ và phân dương cùng độ lớn tại bề mặt quả cầu điện môi.
 
-Lúc này điện trường bên trong điện môi bị giảm đi $\epsilon_r$ lần, vì chất điện môi lúc này bị phân cực thành âm và dương tạo ra một điện trường đều ngược hướng $\bold{E'}$ với điện trường $\bold{E_0}$ do $Q$ tạo ra, tổng hợp hai điện trường này:
+Lúc này điện trường bên trong điện môi bị giảm đi $\epsilon_r$ lần, vì chất điện môi lúc này bị phân cực thành âm và dương tạo ra một điện trường đều ngược hướng $\mathbf{E'}$ với điện trường $\mathbf{E_0}$ do $Q$ tạo ra, tổng hợp hai điện trường này:
 
 $$
 \begin{equation}
-\bold{E}_{in} = \bold{E_0} + \bold{E'} = \frac{\bold{E_0}}{\epsilon_r}
+\mathbf{E}_{in} = \mathbf{E_0} + \mathbf{E'} = \frac{\mathbf{E_0}}{\epsilon_r}
 \end{equation}
 $$
 
@@ -92,7 +93,7 @@ $$
 
 $$
 \begin{equation}
-\bold{E}_{out} = \bold{E_0}
+\mathbf{E}_{out} = \mathbf{E_0}
 \end{equation}
 $$
 
@@ -100,7 +101,7 @@ Ta có thể dùng định lý Gauss cho điện trường để chứng minh đ
 
 $$
 \begin{equation}
-\int \bold{E} \cdot d\bold{A} = \frac{Q_{total}}{\epsilon_0} = \frac{Q + Q_p}{\epsilon_0}
+\int \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{total}}{\epsilon_0} = \frac{Q + Q_p}{\epsilon_0}
 \end{equation}
 $$
 
@@ -110,7 +111,7 @@ Trong đó $Q_p$ là tổng các điện tích phân cực và nó bằng 0. V�
 
 Hãy nhớ về vật dẫn (giả sử thay điện môi thành vật dẫn), tại sao trong vật dẫn điện trường bằng 0 nhưng ra khỏi vật dẫn thì lại có điện trường do điện tích $Q$ gây ra ? Đấy là vì trên bề mặt vật dẫn lúc này có các điện tích mặt (và nó bằng với điện tích $Q$).
 
-Tương tự khi điện trường bị giảm trong điện môi, ngay khi chúng ra ngoài và được tăng thêm nhờ cương độ điện trường của các điện tích phân cực tại bề mặt chất điện môi.
+Tương tự khi điện trường bị giảm trong điện môi, ngay khi chúng ra ngoài và được tăng thêm nhờ cương độ điện trường của các điện tích liên kết mặt bị phân cực tại bề mặt chất điện môi.
 
 > 4. Chia mặt phẳng thành 2 nửa vô hạn, một bên là môi trường $\epsilon_1$, một bên là $\epsilon_2$. Đặt điện tích $Q > 0$ bên trong môi trường $\epsilon_1$, chuyện gì sẽ xảy ra?
 
@@ -122,13 +123,13 @@ Ta có thể tìm được mật độ điện tích $\sigma_{p1}$ và $\sigma_{
 
 $$
 \begin{equation*}
-\sigma_{p1} = \bold{P_1} \cdot \hat{n}
+\sigma_{p1} = \mathbf{P_1} \cdot \hat{n}
 \end{equation*}
 $$
 
 $$
 \begin{equation*}
-\sigma_{p2} = \bold{P_2} \cdot \hat{n}
+\sigma_{p2} = \mathbf{P_2} \cdot \hat{n}
 \end{equation*}
 $$
 
@@ -136,8 +137,8 @@ Mật độ điện tích tại bề mặt phân cách lúc này:
 
 $$
 \begin{equation}
-\sigma_p = (\bold{P_1} - \bold{P_2}) \cdot \hat{n}
+\sigma_p = (\mathbf{P_1} - \mathbf{P_2}) \cdot \hat{n}
 \end{equation}
 $$
 
-<b>Lưu ý:</b> $\bold{P_1}$ sẽ trái dấu với $\bold{P_2}$.
+<b>Lưu ý:</b> $\mathbf{P_1}$ sẽ trái dấu với $\mathbf{P_2}$.
