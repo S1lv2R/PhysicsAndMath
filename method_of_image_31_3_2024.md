@@ -141,4 +141,4 @@ $$
 \end{equation}
 $$
 
-<b>Lưu ý:</b> $\mathbf{P_1}$ sẽ trái dấu với $\mathbf{P_2}$.
+<b>Lưu ý:</b> $\mathbf{P_1}$ sẽ cùng hướng với $\mathbf{P_2}$.
