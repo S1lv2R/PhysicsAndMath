@@ -142,3 +142,141 @@ $$
 $$
 
 <b>Lưu ý:</b> $\mathbf{P_1}$ sẽ cùng hướng với $\mathbf{P_2}$.
+
+## Chứng minh cấu hình ảnh điện trong điện môi
+
+Cho một nửa môi trường vô hạn có chất điện môi $\epsilon_1$ và một nửa còn lại là $\epsilon_2$. Đặt một điện tích $q > 0$ vào môi trường chất điện môi $\epsilon_1$. Tìm cấu hình ảnh điện đối với trường hợp này.
+
+<p align="center" width="100%">
+    <img src="image_1.png" width="80%">
+</p>
+
+Điện tích $q$ làm phân cực chất điện môi $\epsilon_1$ và khiến điện trường bị giảm đi $\epsilon_1$ lần. Tại bề mặt phân cách trong môi trường $\epsilon_1$ xuất hiện các điện tích liên kết mặt $\sigma_1$ và bên môi trường $\epsilon_2$ là $\sigma_2$.
+
+Ta có điện tích liên kết mặt tại mặt phân cách là $\sigma = \sigma_1 + \sigma_2$. Ta xem mặt phân cách như là một mặt phẳng tích điện, và nó gây ra một điện trường vuông góc với mặt phân cách:
+
+$$
+E^1_{Oz} = \frac{\sigma}{2\epsilon_0} \\[5pt]
+$$
+
+$$
+E^2_{Oz} = -\frac{\sigma}{2\epsilon_0}
+$$
+
+
+Tại mặt phân cách, ta có điều kiện biên:
+
+$$
+\begin{equation*}
+D_{2n} - D_{1n} = \sigma_f = 0
+\rightarrow D_{1n} = D_{2n}
+\end{equation*}
+$$
+
+Hay:
+
+$$
+\epsilon_0 \epsilon_1 E_{1n} = \epsilon_0 \epsilon_2 E_{2n}
+$$
+
+$$
+\rightarrow \epsilon_1 (\frac{\sigma}{2\epsilon_0} - \frac{q}{4\pi \epsilon_0  \epsilon_1 r^2} cos \ \theta) = \epsilon_2 (-\frac{\sigma}{2\epsilon_0} - \frac{q}{4\pi \epsilon_0  \epsilon_1 r^2} cos \ \theta) \\
+$$
+
+$$
+\rightarrow \sigma = \frac{q cos \ \theta}{2 \pi \epsilon_1 r^2} (\frac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})
+$$
+
+<p align="center" width="100%">
+    <img src="image_2.png" width="80%">
+</p>
+
+Hay ta còn có thể viết lại:
+
+$$
+\sigma (\theta) = \frac{q \ cos^3 \ \theta}{2 \pi \epsilon_1 d^2} (\frac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})
+$$
+
+Đặt:
+
+$$
+q_1 = (\frac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2}) \frac{q}{\epsilon_1}
+$$
+
+$$
+\sigma (\theta) = \frac{q_1}{2 \pi d^2} \ cos^3 \ \theta
+$$
+
+Xét điểm $M_1(z, 0)$. Điện thế tại $M_1$ do điện tích $q/\epsilon_1$ và điện tích liên kết $\sigma (\theta)$ trên mặt phân cách gây ra là:
+
+$$
+V_{M_1} = \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 | z - d|} + V_{\sigma}
+$$
+
+Trong đó:
+
+$$
+V_{\sigma} = \int dV = \int \frac{q_1}{4\pi \epsilon_0} \frac{\sigma 2\pi \rho \ d\rho}{2\sqrt{\rho^2 + z^2}}
+$$
+
+Ta có: $\rho/d = tan \ \theta \rightarrow \rho = d \cdot tan \ \theta$ và $d\rho = d \cdot d\theta / cos^2 \ \theta$.
+
+$$
+\begin{align*}
+V_{\sigma} &= \frac{q_1}{4 \pi \epsilon_0} \int^{\pi/2}_0 \frac{cos^3 \theta \cdot sin \theta \cdot d\theta}{cos^2 \theta \cdot cos \theta \cdot \sqrt{d^2 tan^2 \theta + z^2}} \\
+
+&= \frac{q_1}{4 \pi \epsilon_0} \int^{\pi/2}_0 \frac{sin \theta \cdot cos \theta \cdot d\theta}{\sqrt{d^2 sin^2 \theta + z^2 cos^2 \theta}} \\
+\end{align*}
+$$
+
+Đặt:
+
+$$
+u = d^2 sin^2 \theta + z^2 cos^2 \theta \\
+
+\rightarrow du = (2d^2sin\theta \cdot cos \theta - 2z^2 cos \theta \cdot sin\theta)d\theta = 2(d^2 - z^2) cos\theta \cdot sin \theta d\theta
+$$
+
+Khi $\theta = 0 \rightarrow u = z^2$
+
+Khi $\theta = \pi/2 \rightarrow u = d^2$
+
+$$
+\begin{align*}
+V_{\sigma} &= \frac{q_1}{4 \pi \epsilon_0 (d^2 - z^2)} \int^{d^2}_{z^2} \frac{du}{2\sqrt{u}} \\
+
+&= \frac{q_1}{4 \pi \epsilon_0} \frac{d - z}{d^2 - z^2} \\
+
+&= \frac{q_1}{4\pi \epsilon_0 (d + z)} \\
+
+&= \frac{q'}{4\pi \epsilon_0 \epsilon_1 (d + z)}
+\end{align*}
+$$
+
+Trong đó ta đặt $q' = \epsilon_1q_1 = (\dfrac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})q$. Vậy điện thế do các điện tích liên kết tại mặt phân cách gây ra tương đương như điện thế do điện tích $q'$ đặt tại $(-d, 0)$ trong môi trường $\epsilon_1$ gây ra.
+
+Chứng minh tương tự đối với một điểm $M_2(-z, 0)$ trong môi trường $\epsilon_2$:
+
+$$
+\begin{align*}
+V_{M_2} &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + V_{\sigma} \\
+
+&= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + \frac{q'}{4 \pi \epsilon_0 \epsilon_1 (d - z)} \\
+
+&= \frac{1}{4 \pi \epsilon_0} \frac{q''}{\epsilon_2 (d-z)}
+\end{align*}
+$$
+
+Trong đó $q'' = \dfrac{2\epsilon_2}{\epsilon_2 + \epsilon_1} q$ đặt tại $A(d, 0)$ trong môi trường $\epsilon_2$.
+
+<p align="center" width="100%">
+    <img src="image_3.png" width="80%">
+</p>
+
+Hình $(a)$, là cấu hình ban đầu của bài toán.
+
+Hình $(b)$, là điện trường do điện tích $q$ và điện tích liên kết tại mặt phân cách gây ra trong môi trường $\epsilon_1$ ($z > 0$) tương đương như điện trường do hệ điện tích $q$ tại $A(d, 0)$ và $q'$ tại $A'(-d, 0)$ đặt đối xứng qua mặt phân cách trong cùng một môi trường $\epsilon_1$.
+
+Hình $(c)$, là điện trường do điện tích $q$ và điện tích liên kết tại mặt phân cách gây ra trong môi trường $\epsilon_2$ ($z < 0$) tương đương như một điện tích $q''$ đặt trong môi trường $\epsilon_2$ tại $A(d, 0)$.
+
+Như vậy, do điện trường không liên tục tại mặt phân cách nên ta không thể xây dựng một hàm điện trường chỉ với một cấu hình ảnh điện duy nhất được. Ta phải phân ra hai trường hợp cho điện trường trong hai môi trường $\epsilon_1$ và $\epsilon_2$.
