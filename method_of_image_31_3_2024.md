@@ -156,13 +156,12 @@ Cho một nửa môi trường vô hạn có chất điện môi $\epsilon_1$ v�
 Ta có điện tích liên kết mặt tại mặt phân cách là $\sigma = \sigma_1 + \sigma_2$. Ta xem mặt phân cách như là một mặt phẳng tích điện, và nó gây ra một điện trường vuông góc với mặt phân cách:
 
 $$
-E^1_{Oz} = \frac{\sigma}{2\epsilon_0} \\[5pt]
+E^1_{Oz} = \frac{\sigma}{2\epsilon_0}
 $$
 
 $$
 E^2_{Oz} = -\frac{\sigma}{2\epsilon_0}
 $$
-
 
 Tại mặt phân cách, ta có điều kiện biên:
 
@@ -222,18 +221,18 @@ $$
 Ta có: $\rho/d = tan \ \theta \rightarrow \rho = d \cdot tan \ \theta$ và $d\rho = d \cdot d\theta / cos^2 \ \theta$.
 
 $$
-\begin{align*}
+\begin{equation*}
+\begin{aligned}
 V_{\sigma} &= \frac{q_1}{4 \pi \epsilon_0} \int^{\pi/2}_0 \frac{cos^3 \theta \cdot sin \theta \cdot d\theta}{cos^2 \theta \cdot cos \theta \cdot \sqrt{d^2 tan^2 \theta + z^2}} \\
-
 &= \frac{q_1}{4 \pi \epsilon_0} \int^{\pi/2}_0 \frac{sin \theta \cdot cos \theta \cdot d\theta}{\sqrt{d^2 sin^2 \theta + z^2 cos^2 \theta}} \\
-\end{align*}
+\end{aligned}
+\end{equation*}
 $$
 
 Đặt:
 
 $$
 u = d^2 sin^2 \theta + z^2 cos^2 \theta \\
-
 \rightarrow du = (2d^2sin\theta \cdot cos \theta - 2z^2 cos \theta \cdot sin\theta)d\theta = 2(d^2 - z^2) cos\theta \cdot sin \theta d\theta
 $$
 
@@ -244,11 +243,8 @@ Khi $\theta = \pi/2 \rightarrow u = d^2$
 $$
 \begin{align*}
 V_{\sigma} &= \frac{q_1}{4 \pi \epsilon_0 (d^2 - z^2)} \int^{d^2}_{z^2} \frac{du}{2\sqrt{u}} \\
-
 &= \frac{q_1}{4 \pi \epsilon_0} \frac{d - z}{d^2 - z^2} \\
-
 &= \frac{q_1}{4\pi \epsilon_0 (d + z)} \\
-
 &= \frac{q'}{4\pi \epsilon_0 \epsilon_1 (d + z)}
 \end{align*}
 $$
@@ -260,9 +256,7 @@ Chứng minh tương tự đối với một điểm $M_2(-z, 0)$ trong môi tr�
 $$
 \begin{align*}
 V_{M_2} &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + V_{\sigma} \\
-
 &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + \frac{q'}{4 \pi \epsilon_0 \epsilon_1 (d - z)} \\
-
 &= \frac{1}{4 \pi \epsilon_0} \frac{q''}{\epsilon_2 (d-z)}
 \end{align*}
 $$
@@ -279,4 +273,4 @@ Hình $(b)$, là điện trường do điện tích $q$ và điện tích liên 
 
 Hình $(c)$, là điện trường do điện tích $q$ và điện tích liên kết tại mặt phân cách gây ra trong môi trường $\epsilon_2$ ($z < 0$) tương đương như một điện tích $q''$ đặt trong môi trường $\epsilon_2$ tại $A(d, 0)$.
 
-Như vậy, do điện trường không liên tục tại mặt phân cách nên ta không thể xây dựng một hàm điện trường chỉ với một cấu hình ảnh điện duy nhất được. Ta phải phân ra hai trường hợp cho điện trường trong hai môi trường $\epsilon_1$ và $\epsilon_2$.
+Như vậy, do điện trường không liên tục tại mặt phân cách nên ta không thể xây dựng một hàm điện trường chỉ với một cấu hình ảnh điện duy nhất được. Ta phải phân ra hai cấu hình ảnh điện cho điện trường trong từng môi trường $\epsilon_1$ và $\epsilon_2$.
